@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+
+    //Blue palette
+    <color name="deep_ocean">#06283D</color>
+    <color name="deep_river">#1363DF</color>
+    <color name="deep_river_2">#3F89FA</color>
+    <color name="deep_pool">#45B5FF</color>
+    <color name="deep_water">#6AC2FD</color>
+    <color name="soft_water">#DFF6FF</color>
+
+    //Black palette
+    <color name="black">#FF000000</color>
+    <color name="soft_black">#444440</color>
+
+    //Green palette
+    <color name="pure_green">#D6F9E6</color>
+    <color name="grass_green">#639E59</color>
+    <color name="soft_green">#C4DFAA</color>
+    <color name="green">#19a84c</color>
+    <color name="green_2">#41D348</color>
+
+    //Yellow palette
+    <color name="soft_yellow">#F5E8C7</color>
+    <color name="solid_yellow">#FFD24C</color>
+    <color name="solid_yellow_2">#FAC213</color>
+    <color name="orange">#F19724</color>
+
+
+    //Purple palette
+    <color name="solid_soft_purple">#AC6EFD</color>
+    <color name="obscure_purple">#A25AFF</color>
+    <color name="soft_purple">#D9ACF8</color>
+    <color name="deep_purple">#353666</color>
+
+    //Definitive palette
+    <color name="primary_sub_blue">#344955</color>
+    <color name="primary_sub_blue_2">#445C6A</color>
+    <color name="primary_hard_sub_blue">#232f34</color>
+    <color name="primary_soft_sub_blue">#4a6572</color>
+    <color name="secondary_sub_yellow">#f9aa33</color>
+    <color name="secondary_sub_gray">#d2dbe0</color>
+    <color name="secondary_sub_gray_2">#B7BBBE</color>
+    <color name="secondary_background_gray">#edf0f2</color>
+    <color name="azul_rocoso">#07435f</color>
+    <color name="error_red">#DC0500</color>
+    <color name="fucsia_matrix">#ec4f9d</color>
+    <color name="button_start_background">#4f5b65</color>
+
+
+</resources>

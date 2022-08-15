@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">toc ocd</string>
+
+    //Start App
+    <string name="what_would">What would you to be called?</string>
+    <string name="your_name">Your name…</string>
+    <string name="continue_">Continue</string>
+
+    //Your Name is
+    <string name="hintName">Put your name here</string>
+
+    //Information
+    <string name="what_is_the_OCD">What is the OCD?</string>
+    <string name="touch_for_more_information">Touch for information</string>
+    <string name="description_information">Description…</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Psychologists
+    <string name="specialist">☑Obsessive-Compulsive (OCD) <br/> ☑Anxiety <br/> ☑Coping Skills</string>
+    <string name="contact">contact</string>
+
+
+
+</resources>

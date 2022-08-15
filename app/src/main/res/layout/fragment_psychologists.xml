@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PsychologistFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_background_gray"
+    android:orientation="vertical"
+    android:tag="fragment_psychologist_tag"
+    tools:context=".view.fragment.PsychologistsFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingStart="35dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:text="Seek Help Area"
+                android:textColor="@color/azul_rocoso"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/more_information_about_fragment"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingStart="35dp"
+            android:paddingEnd="20dp"
+            android:text="Find a list of OCD psychologists who can help you."
+            android:textColor="@color/soft_black"
+            android:textSize="22sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/psychologist_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondary_background_gray"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/card_psychologists" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_auto_start="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/viewLoading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_psychologists" />
+
+                <include layout="@layout/shimmer_psychologists" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

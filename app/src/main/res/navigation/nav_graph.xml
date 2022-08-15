@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/information_fragment">
+
+    <fragment
+        android:id="@+id/information_fragment"
+        android:name="com.example.tococd.view.fragment.InformationFragment"
+        android:label="Information"
+        tools:layout="@layout/fragment_information"/>
+
+    <fragment
+        android:id="@+id/ocd_types"
+        android:name="com.example.tococd.view.fragment.TypesFragment"
+        android:label="Types"
+        tools:layout="@layout/fragment_types"/>
+
+    <fragment
+        android:id="@+id/psychologist_fragment"
+        android:name="com.example.tococd.view.fragment.PsychologistsFragment"
+        android:label="Psychologists"
+        tools:layout="@layout/fragment_psychologists"/>
+
+</navigation>

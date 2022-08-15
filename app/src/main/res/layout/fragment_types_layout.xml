@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".view.fragment.TypesFragment"
+    android:background="@color/secondary_background_gray"
+    android:id="@+id/TypesFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Types of OCD Area"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            android:paddingStart="35dp"
+            android:textColor="@color/azul_rocoso"
+            android:textSize="28sp"
+            android:paddingBottom="10dp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="50dp"
+            android:id="@+id/more_information_about_fragment"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="know the most common types of OCD"
+            android:paddingStart="35dp"
+            android:paddingEnd="22dp"
+            android:textColor="@color/soft_black"
+            android:textSize="22sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/secondary_background_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/card_types"
+        android:id="@+id/recycler_view_types"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
