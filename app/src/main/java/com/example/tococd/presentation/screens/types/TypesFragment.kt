@@ -14,8 +14,6 @@ import com.airbnb.lottie.LottieDrawable
 import com.amrdeveloper.lottiedialog.LottieDialog
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentTypesLayoutBinding
-import com.example.tococd.model.TypesModel
-import com.example.tococd.utils.Event
 import com.example.tococd.utils.extension.observeFlows
 import kotlinx.coroutines.launch
 
@@ -149,7 +147,7 @@ class TypesFragment : Fragment() {
         observeFlows { coroutineScope ->
             coroutineScope.launch {
                 typesViewModel.typesList.collect { typesState ->
-                    typesAdapter.setData(typesState.types)
+                    typesAdapter.submitList(typesState.types)
                 }
             }
         }
