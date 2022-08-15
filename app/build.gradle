@@ -90,8 +90,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     //Shimmer
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
-    //ChipNavigation
-    implementation 'com.github.ismaeldivita:chip-navigation-bar:1.4.0'
     //WaveAnimation
     //implementation 'com.scwang.wave:MultiWaveHeader:1.0.0'
     /** Dagger hilt */

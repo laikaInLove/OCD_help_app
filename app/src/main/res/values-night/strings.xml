@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ocd_information">Information</string>
+    <string name="ocd_types">Types</string>
+    <string name="ocd_seek_help">Seek help</string>
+</resources>

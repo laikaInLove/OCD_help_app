@@ -20,7 +20,9 @@ import com.example.tococd.model.InformationModel
 
 class InformationFragment : Fragment() {
 
-    private lateinit var binding: FragmentInformationBinding
+    private var _binding: FragmentInformationBinding? = null
+    private val binding: FragmentInformationBinding
+        get() = _binding!!
 
     private val informationViewModel by viewModels<InformationViewModel>()
 
@@ -28,8 +30,8 @@ class InformationFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
+        _binding = FragmentInformationBinding.inflate(inflater, container, false)
         val takePictureAction = Button(this.context)
         takePictureAction.setBackgroundColor(Color.LTGRAY)
         takePictureAction.text = "Continue"

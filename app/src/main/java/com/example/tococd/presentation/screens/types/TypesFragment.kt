@@ -16,6 +16,8 @@ import com.example.tococd.R
 import com.example.tococd.databinding.FragmentTypesLayoutBinding
 import com.example.tococd.model.TypesModel
 import com.example.tococd.utils.Event
+import com.example.tococd.utils.extension.observeFlows
+import kotlinx.coroutines.launch
 
 class TypesFragment : Fragment() {
 
@@ -105,8 +107,6 @@ class TypesFragment : Fragment() {
             dialog.show()
         }*/
 
-        typesViewModel.getAllTypesList()
-
         var like: Boolean = false
         like =
             likeAnimation(
@@ -119,7 +119,7 @@ class TypesFragment : Fragment() {
             dialog.show()
         }
 
-        setUpObservers()
+        setUpCollectors()
     }
 
     override fun onDestroyView() {
@@ -145,15 +145,13 @@ class TypesFragment : Fragment() {
         }
     }
 
-    private fun handleEvent(event: Event<List<TypesModel>>?) {
-        event?.getContentIfNotHandled()?.let {
-            typesAdapter.setData(it)
-        }
-    }
-
-    private fun setUpObservers() {
-        typesViewModel.typesList.observe(viewLifecycleOwner) { event ->
-            handleEvent(event)
+    private fun setUpCollectors() {
+        observeFlows { coroutineScope ->
+            coroutineScope.launch {
+                typesViewModel.typesList.collect { typesState ->
+                    typesAdapter.setData(typesState.types)
+                }
+            }
         }
     }
 }
