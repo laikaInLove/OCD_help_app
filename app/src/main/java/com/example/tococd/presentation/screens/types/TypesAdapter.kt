@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.tococd.R
 import com.example.tococd.databinding.CardTypesBinding
 import com.example.tococd.model.TypesModel
+import com.example.tococd.utils.extension.loadUrlImage
 
 class TypesAdapter : RecyclerView.Adapter<TypesAdapter.TypesVH>() {
 
@@ -39,12 +40,7 @@ class TypesAdapter : RecyclerView.Adapter<TypesAdapter.TypesVH>() {
         holder.binding.typesTitle.text = types.tittleTypes
         holder.binding.typesDescription.text = types.descriptionTypes
         holder.binding.typesButton.setImageResource(R.drawable.information_speech)
-
-        //Load image with Glide
-        Glide.with(holder.binding.root.context)
-            .load(types.imageTypes)
-            .error(R.drawable.ic_error_conection)
-            .into(holder.binding.imageViewTypes)
+        holder.binding.imageViewTypes.loadUrlImage(types.imageTypes)
 
         var like: Boolean = false
 
@@ -58,6 +54,7 @@ class TypesAdapter : RecyclerView.Adapter<TypesAdapter.TypesVH>() {
         }
     }
 
+    //TODO: CHECK THIS FUNCTION
     private fun likeAnimation(
         imageView: LottieAnimationView,
         animation: Int,
