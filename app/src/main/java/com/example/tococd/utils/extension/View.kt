@@ -19,6 +19,6 @@ fun ImageView.loadUrlImage(url: String) {
     Glide.with(this)
         .load(url)
         .diskCacheStrategy(DiskCacheStrategy.ALL)
-        .placeholder(R.drawable.ic_error_conection)
+        .error(R.drawable.ic_error_conection)
         .into(this)
 }
