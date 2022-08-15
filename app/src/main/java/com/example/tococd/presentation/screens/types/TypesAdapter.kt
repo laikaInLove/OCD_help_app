@@ -13,9 +13,13 @@ import com.airbnb.lottie.LottieDrawable
 import com.example.tococd.R
 import com.example.tococd.databinding.CardTypesBinding
 import com.example.tococd.model.TypesModel
+import com.example.tococd.presentation.util.BaseAdapter
 import com.example.tococd.utils.extension.loadUrlImage
 
-class TypesAdapter : ListAdapter<TypesModel,TypesAdapter.TypesVH>(TypesDiffCallback()) {
+class TypesAdapter : BaseAdapter<TypesModel,TypesAdapter.TypesVH>(
+    areItemsTheSame = { oldItem, newItem -> oldItem.tittleTypes == newItem.tittleTypes },
+    areContentsTheSame = {oldItem, newItem -> oldItem == newItem }
+) {
 
     class TypesVH(private val binding: CardTypesBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(types: TypesModel) {
@@ -64,17 +68,4 @@ class TypesAdapter : ListAdapter<TypesModel,TypesAdapter.TypesVH>(TypesDiffCallb
 
         return !like
     }
-
-    override fun getItemCount(): Int = currentList.count()
-}
-
-private class TypesDiffCallback: DiffUtil.ItemCallback<TypesModel>() {
-    override fun areItemsTheSame(oldItem: TypesModel, newItem: TypesModel): Boolean {
-        return oldItem.tittleTypes == newItem.tittleTypes
-    }
-
-    override fun areContentsTheSame(oldItem: TypesModel, newItem: TypesModel): Boolean {
-        return oldItem == newItem
-    }
-
 }

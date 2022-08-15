@@ -2,12 +2,12 @@ package com.example.tococd.presentation.screens.information
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.airbnb.lottie.LottieAnimationView
@@ -15,14 +15,14 @@ import com.airbnb.lottie.LottieDrawable
 import com.amrdeveloper.lottiedialog.LottieDialog
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentInformationBinding
-import com.example.tococd.model.InformationModel
-
 
 class InformationFragment : Fragment() {
 
     private var _binding: FragmentInformationBinding? = null
     private val binding: FragmentInformationBinding
         get() = _binding!!
+
+    private val informationAdapter by lazy { InformationAdapter() }
 
     private val informationViewModel by viewModels<InformationViewModel>()
 
@@ -49,7 +49,12 @@ class InformationFragment : Fragment() {
             .setAnimation(R.raw.information)
             .setAnimationRepeatCount(LottieDrawable.INFINITE)
             .setAutoPlayAnimation(true)
-            .setDialogBackgroundDrawable(context?.let { ContextCompat.getDrawable(it.applicationContext, R.drawable.blue_button) })
+            .setDialogBackgroundDrawable(context?.let {
+                ContextCompat.getDrawable(
+                    it.applicationContext,
+                    R.drawable.blue_button
+                )
+            })
             .setTitle("Information Area")
             .setDialogWidth(1000)
             .setTitleTextSize(25F)
@@ -65,7 +70,12 @@ class InformationFragment : Fragment() {
             .setAnimation(R.raw.touch)
             .setAnimationRepeatCount(LottieDrawable.INFINITE)
             .setAutoPlayAnimation(true)
-            .setDialogBackgroundDrawable(context?.let { ContextCompat.getDrawable(it.applicationContext, R.drawable.blue_button) })
+            .setDialogBackgroundDrawable(context?.let {
+                ContextCompat.getDrawable(
+                    it.applicationContext,
+                    R.drawable.blue_button
+                )
+            })
             .setTitle("Information Area")
             .setDialogWidth(1000)
             .setTitleTextSize(25F)
@@ -77,41 +87,50 @@ class InformationFragment : Fragment() {
             //.setDialogBackgroundDrawable()
             .addActionButton(lastActionInformation)
 
-      /*  takePictureAction.setOnClickListener {
-            dialog.cancel()
-            dialog2.show()
-            SharedApp.prefs.information = "true"
-        }
+        /*  takePictureAction.setOnClickListener {
+              dialog.cancel()
+              dialog2.show()
+              SharedApp.prefs.information = "true"
+          }
 
-        lastActionInformation.setOnClickListener {
-            dialog2.cancel()
-            SharedApp.prefs.information = "true"
-        }
+          lastActionInformation.setOnClickListener {
+              dialog2.cancel()
+              SharedApp.prefs.information = "true"
+          }
 
-        binding = FragmentInformationBinding.inflate(layoutInflater, container, false)
+          binding = FragmentInformationBinding.inflate(layoutInflater, container, false)
 
-        if (SharedApp.prefs.information?.isEmpty() == true){
-            dialog.show()
-        }*/
+          if (SharedApp.prefs.information?.isEmpty() == true){
+              dialog.show()
+          }*/
 
 
-       /* // Use shared preference (show)
-        binding.yourNameHere.text = ("\uD83D\uDC4B Hi " + SharedApp.prefs.name)*/
+        /* // Use shared preference (show)
+         binding.yourNameHere.text = ("\uD83D\uDC4B Hi " + SharedApp.prefs.name)*/
 
         //informationViewModel.getAllInformationList()
         informationViewModel.informationList.observe(viewLifecycleOwner, Observer { value ->
-            setRecyclerView(value)
+            informationAdapter.submitList(value)
         })
 
         var like: Boolean = false
         like =
-            likeAnimation(binding.moreInformationAboutFragment as LottieAnimationView, R.raw.more_info_about_fragment, like)
+            likeAnimation(
+                binding.moreInformationAboutFragment as LottieAnimationView,
+                R.raw.more_info_about_fragment,
+                like
+            )
 
         binding.moreInformationAboutFragment.setOnClickListener {
             dialog.show()
         }
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpViews()
     }
 
     private fun likeAnimation(
@@ -125,10 +144,10 @@ class InformationFragment : Fragment() {
         return !like
     }
 
-    private fun setRecyclerView(informationList: List<InformationModel>) {
-        val informationAdapter = InformationAdapter(informationList)
-        binding.recyclerViewInformation.adapter = informationAdapter
-        binding.recyclerViewInformation.setHasFixedSize(true)
+    private fun setUpViews() {
+        binding.recyclerViewInformation.apply {
+            adapter = informationAdapter
+            setHasFixedSize(true)
+        }
     }
-
 }

@@ -22,3 +22,11 @@ fun ImageView.loadUrlImage(url: String) {
         .error(R.drawable.ic_error_conection)
         .into(this)
 }
+
+fun ImageView.loadImage(drawableId: Int) {
+    Glide.with(this)
+        .load(drawableId)
+        .diskCacheStrategy(DiskCacheStrategy.ALL)
+        .error(R.drawable.ic_error_conection)
+        .into(this)
+}
