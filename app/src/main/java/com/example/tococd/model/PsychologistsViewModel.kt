@@ -2,8 +2,7 @@ package com.example.tococd.model
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.tococd.service.PsychologistsResponse
-import com.example.tococd.view.fragment.PsychologistsFragment
+import com.example.tococd.data.remote.response.PsychologistsResponse
 
 class PsychologistsViewModel: ViewModel() {
     val psychologistsList = MutableLiveData<List<PsychologistsResponse>>()

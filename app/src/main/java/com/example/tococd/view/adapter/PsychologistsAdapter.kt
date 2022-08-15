@@ -2,16 +2,14 @@ package com.example.tococd.view.adapter
 
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.tococd.R
 import com.example.tococd.databinding.CardPsychologistsBinding
-import com.example.tococd.service.PsychologistsResponse
+import com.example.tococd.data.remote.response.PsychologistsResponse
 
 class PsychologistsAdapter(private val psychologistList: List<PsychologistsResponse>) :
     RecyclerView.Adapter<PsychologistsAdapter.PsychologistsVH>() {

@@ -1,4 +1,4 @@
-package com.example.tococd.service
+package com.example.tococd.data.remote.response
 
 import com.google.gson.annotations.SerializedName
 
