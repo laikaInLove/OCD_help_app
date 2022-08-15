@@ -95,6 +95,8 @@ dependencies {
     /** Dagger hilt */
     implementation "com.google.dagger:hilt-android:$dagger_version"
     kapt "com.google.dagger:hilt-compiler:$dagger_version"
+    /** Data store */
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
 
     /** Testing */
     testImplementation 'junit:junit:4.13.2'
