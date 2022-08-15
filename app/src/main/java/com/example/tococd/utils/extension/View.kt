@@ -1,5 +1,6 @@
 package com.example.tococd.utils.extension
 
+import android.view.View
 import android.widget.ImageView
 import androidx.annotation.RawRes
 import com.airbnb.lottie.LottieAnimationView
@@ -29,4 +30,12 @@ fun ImageView.loadImage(drawableId: Int) {
         .diskCacheStrategy(DiskCacheStrategy.ALL)
         .error(R.drawable.ic_error_conection)
         .into(this)
+}
+
+fun View.show() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    this.visibility = View.GONE
 }

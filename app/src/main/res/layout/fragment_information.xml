@@ -63,7 +63,10 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="10dp"
-                android:clickable="true" />
+                android:clickable="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/more_info_about_fragment" />
 
         </LinearLayout>
 

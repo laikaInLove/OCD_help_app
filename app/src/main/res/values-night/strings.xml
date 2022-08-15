@@ -3,4 +3,10 @@
     <string name="ocd_information">Information</string>
     <string name="ocd_types">Types</string>
     <string name="ocd_seek_help">Seek help</string>
+    <string name="information_area_title">Information area</string>
+    <string name="information_area_description">Welcome to the information area, remember that the first step to improve is to be informed, here you will know the answers to the biggest questions that arise around OCD.</string>
+    <string name="continue_option">Continue</string>
+    <string name="touch_description">Touch each card to display all the information and answer your questions.</string>
+    <string name="close_option">Close</string>
+    <string name="user_name">Hi %1$s</string>
 </resources>
