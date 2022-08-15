@@ -1,8 +1,6 @@
 package com.example.tococd.view.fragment
 
-import android.content.Context
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,7 +17,6 @@ import com.example.tococd.R
 import com.example.tococd.view.adapter.InformationAdapter
 import com.example.tococd.databinding.FragmentInformationBinding
 import com.example.tococd.model.InformationModel
-import com.example.tococd.utils.SharedApp
 import com.example.tococd.viewmodel.InformationViewModel
 
 

@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.amrdeveloper.lottiedialog.LottieDialog
@@ -17,8 +16,6 @@ import com.example.tococd.R
 import com.example.tococd.databinding.FragmentTypesLayoutBinding
 import com.example.tococd.model.TypesModel
 import com.example.tococd.utils.Event
-import com.example.tococd.utils.SharedApp
-import com.example.tococd.view.adapter.InformationAdapter
 import com.example.tococd.view.adapter.TypesAdapter
 import com.example.tococd.viewmodel.TypesViewModel
 

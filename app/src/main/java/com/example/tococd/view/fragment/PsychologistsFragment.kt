@@ -16,7 +16,6 @@ import com.example.tococd.R
 import com.example.tococd.databinding.FragmentPsychologistsBinding
 import com.example.tococd.data.remote.service.APIService
 import com.example.tococd.data.remote.response.PsychologistsResponse
-import com.example.tococd.utils.SharedApp
 import com.example.tococd.view.adapter.PsychologistsAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -80,7 +79,7 @@ class PsychologistsFragment : Fragment() {
             //.setDialogBackgroundDrawable()
             .addActionButton(lastAction)
 
-        takePictureAction.setOnClickListener {
+      /*  takePictureAction.setOnClickListener {
             dialog.cancel()
             dialog2.show()
             SharedApp.prefs.psychologists = "true"
@@ -95,7 +94,7 @@ class PsychologistsFragment : Fragment() {
 
         if (SharedApp.prefs.psychologists?.isEmpty() == true){
             dialog.show()
-        }
+        }*/
 
         var like: Boolean = false
         like =
@@ -132,7 +131,7 @@ class PsychologistsFragment : Fragment() {
     }
 
     private fun allPsychologists() {
-        CoroutineScope(Dispatchers.IO).launch {
+        /*CoroutineScope(Dispatchers.IO).launch {
             val call = getRetrofit().create(APIService::class.java).getPsychologists("psychologists")
 
             val psychologist= call.body()
@@ -159,7 +158,7 @@ class PsychologistsFragment : Fragment() {
             }
 
 
-        }
+        }*/
     }
 
     private fun setRecyclerView(psychologistsList: List<PsychologistsResponse>) {

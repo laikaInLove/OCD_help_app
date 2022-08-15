@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar"
         tools:targetApi="31"
-        android:name=".utils.SharedApp">
+        android:name=".OCDApp">
         <activity
             android:name=".view.activity.SplashScreenActivity"
             android:exported="true"

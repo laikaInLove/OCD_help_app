@@ -7,5 +7,5 @@ import retrofit2.http.Url
 
 interface APIService {
     @GET
-    suspend fun getPsychologists(@Url url: String): Response<List<PsychologistsResponse>>
+    suspend fun getPsychologists(): Response<List<PsychologistsResponse>>
 }

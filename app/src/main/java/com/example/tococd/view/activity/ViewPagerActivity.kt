@@ -11,7 +11,6 @@ import com.example.tococd.R
 import com.example.tococd.view.adapter.ViewPagerAdapter
 import com.example.tococd.databinding.ViewPagerActivityBinding
 import com.example.tococd.model.Board
-import com.example.tococd.utils.SharedApp
 
 class ViewPagerActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelected {
 

@@ -1,21 +1,15 @@
 package com.example.tococd.view.activity
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SharedMemory
-import android.text.TextUtils.isEmpty
 import android.util.Log
-import android.widget.Toast
-import androidx.constraintlayout.widget.SharedValues
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isEmpty
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.example.tococd.R
 import com.example.tococd.databinding.ActivityYourNameIsBinding
-import com.example.tococd.utils.SharedApp
 import com.example.tococd.utils.SharedApp.Companion.prefs
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
