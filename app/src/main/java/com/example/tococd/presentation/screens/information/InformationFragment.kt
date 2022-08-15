@@ -9,12 +9,13 @@ import android.widget.Button
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.amrdeveloper.lottiedialog.LottieDialog
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentInformationBinding
+import com.example.tococd.utils.extension.observeFlows
+import kotlinx.coroutines.launch
 
 class InformationFragment : Fragment() {
 
@@ -108,11 +109,6 @@ class InformationFragment : Fragment() {
         /* // Use shared preference (show)
          binding.yourNameHere.text = ("\uD83D\uDC4B Hi " + SharedApp.prefs.name)*/
 
-        //informationViewModel.getAllInformationList()
-        informationViewModel.informationList.observe(viewLifecycleOwner, Observer { value ->
-            informationAdapter.submitList(value)
-        })
-
         var like: Boolean = false
         like =
             likeAnimation(
@@ -131,6 +127,7 @@ class InformationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpViews()
+        setUpCollectors()
     }
 
     private fun likeAnimation(
@@ -148,6 +145,16 @@ class InformationFragment : Fragment() {
         binding.recyclerViewInformation.apply {
             adapter = informationAdapter
             setHasFixedSize(true)
+        }
+    }
+
+    private fun setUpCollectors() {
+        observeFlows { coroutineScope ->
+            coroutineScope.launch {
+                informationViewModel.informationList.collect {
+                    informationAdapter.submitList(it)
+                }
+            }
         }
     }
 }

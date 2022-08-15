@@ -1,34 +1,15 @@
 package com.example.tococd.presentation.screens.information
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.example.tococd.model.InformationModel
 import com.example.tococd.model.InformationProvider
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 class InformationViewModel : ViewModel() {
 
-    init {
-        getAllInformationList() // No se llama
-    }
-
-    //Internal MutableLiveData
-    private val _informationList = MutableLiveData<List<InformationModel>>()
-
-    //External LiveData
-    val informationList: LiveData<List<InformationModel>> = _informationList
-
-     private fun getAllInformationList() {
-         viewModelScope.launch {
-             try {
-                 val list = InformationProvider.getAll()
-                 _informationList.value = list
-             } catch (e: Exception) {
-                print(e)
-             }
-         }
-    }
-
+    private val _informationList: MutableStateFlow<List<InformationModel>> =
+        MutableStateFlow(InformationProvider.informationList)
+    val informationList: StateFlow<List<InformationModel>> = _informationList.asStateFlow()
 }

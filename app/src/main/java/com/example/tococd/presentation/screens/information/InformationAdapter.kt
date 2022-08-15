@@ -30,6 +30,7 @@ class InformationAdapter :
         private fun setUpListeners(information: InformationModel) {
             binding.root.setOnClickListener {
                 information.expandable = !information.expandable
+                setUpExpandableState(information)
             }
         }
 
