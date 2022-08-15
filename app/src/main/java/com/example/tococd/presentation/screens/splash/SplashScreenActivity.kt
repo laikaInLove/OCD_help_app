@@ -1,68 +1,48 @@
 package com.example.tococd.presentation.screens.splash
 
+import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
-import com.airbnb.lottie.LottieAnimationView
-import com.airbnb.lottie.LottieDrawable
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.tococd.R
 import com.example.tococd.databinding.ActivitySplashScreenBinding
 import com.example.tococd.view.activity.ViewPagerActivity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashScreenBinding
-    private val activityScope = CoroutineScope(Dispatchers.Main)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        animateText()
+        goToHome()
+    }
 
-        //Add animations
+    private fun animateText() {
         val bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.scrolling_down)
-        binding.splashScreenDown.startAnimation(bottomAnimation)
-
         val headAnimation = AnimationUtils.loadAnimation(this, R.anim.scrolling_up)
-        binding.splashScreenUp.startAnimation(headAnimation)
-
-        var like: Boolean = false
-        like =
-            likeAnimation(binding.splashScreenUp as LottieAnimationView, R.raw.mental_help, like)
-
-
-        activityScope.launch {
-            delay(2700)
-            startActivity(
-                Intent(
-                    applicationContext,
-                    ViewPagerActivity::class.java
-                )
-            ) startActivity (intent)
-            finish()
+        with(binding) {
+            splashScreenDown.startAnimation(bottomAnimation)
+            splashScreenUp.startAnimation(headAnimation)
         }
     }
 
-    private fun likeAnimation(
-        imageView: LottieAnimationView,
-        animation: Int,
-        like: Boolean
-    ): Boolean {
-        imageView.setAnimation(animation)
-        imageView.repeatCount = LottieDrawable.INFINITE
-        imageView.playAnimation()
-        return !like
+    private fun goToHome() {
+        lifecycleScope.launch {
+            delay(2700)
+            Intent(this@SplashScreenActivity, ViewPagerActivity::class.java).apply {
+                startActivity(this)
+                finish()
+            }
+        }
     }
-}
-
-private infix fun Unit.startActivity(intent: Intent?) {
 }
 
