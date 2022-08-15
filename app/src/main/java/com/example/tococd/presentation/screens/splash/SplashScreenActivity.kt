@@ -1,4 +1,4 @@
-package com.example.tococd.view.activity
+package com.example.tococd.presentation.screens.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +10,7 @@ import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.example.tococd.R
 import com.example.tococd.databinding.ActivitySplashScreenBinding
+import com.example.tococd.view.activity.ViewPagerActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

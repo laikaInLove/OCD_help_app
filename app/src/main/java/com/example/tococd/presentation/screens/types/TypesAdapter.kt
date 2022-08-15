@@ -1,4 +1,4 @@
-package com.example.tococd.view.adapter
+package com.example.tococd.presentation.screens.types
 
 import android.content.Intent
 import android.net.Uri
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.airbnb.lottie.Lottie
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.bumptech.glide.Glide
@@ -31,7 +30,7 @@ class TypesAdapter : RecyclerView.Adapter<TypesAdapter.TypesVH>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TypesVH {
         val view: View =
             LayoutInflater.from(parent.context).inflate(R.layout.card_types, parent, false)
-        return TypesAdapter.TypesVH(view)
+        return TypesVH(view)
     }
 
     override fun onBindViewHolder(holder: TypesVH, position: Int) {

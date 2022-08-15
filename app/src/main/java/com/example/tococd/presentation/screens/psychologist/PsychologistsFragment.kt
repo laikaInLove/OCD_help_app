@@ -1,4 +1,4 @@
-package com.example.tococd.view.fragment
+package com.example.tococd.presentation.screens.psychologist
 
 import android.graphics.Color
 import android.os.Bundle
@@ -7,23 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.amrdeveloper.lottiedialog.LottieDialog
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentPsychologistsBinding
-import com.example.tococd.data.remote.service.APIService
 import com.example.tococd.data.remote.response.PsychologistsResponse
-import com.example.tococd.view.adapter.PsychologistsAdapter
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import www.sanju.motiontoast.MotionToast
-import www.sanju.motiontoast.MotionToastStyle
 
 class PsychologistsFragment : Fragment() {
 

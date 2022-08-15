@@ -1,4 +1,4 @@
-package com.example.tococd.view.adapter
+package com.example.tococd.presentation.screens.psychologist
 
 import android.content.Intent
 import android.net.Uri

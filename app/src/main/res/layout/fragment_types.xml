@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:tag="fragment_types_tag"
     android:background="@color/secondary_sub_gray"
-    tools:context=".view.fragment.TypesFragment">
+    tools:context=".presentation.screens.types.TypesFragment">
 
     <TextView
         android:layout_width="wrap_content"

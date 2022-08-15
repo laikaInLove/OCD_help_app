@@ -8,7 +8,7 @@
     android:background="@color/secondary_background_gray"
     android:orientation="vertical"
     android:tag="fragment_psychologist_tag"
-    tools:context=".view.fragment.PsychologistsFragment">
+    tools:context=".presentation.screens.psychologist.PsychologistsFragment">
 
     <LinearLayout
         android:layout_width="wrap_content"

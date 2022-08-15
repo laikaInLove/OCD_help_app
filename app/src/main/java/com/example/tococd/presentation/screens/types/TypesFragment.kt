@@ -1,4 +1,4 @@
-package com.example.tococd.view.fragment
+package com.example.tococd.presentation.screens.types
 
 import android.graphics.Color
 import android.os.Bundle
@@ -16,8 +16,6 @@ import com.example.tococd.R
 import com.example.tococd.databinding.FragmentTypesLayoutBinding
 import com.example.tococd.model.TypesModel
 import com.example.tococd.utils.Event
-import com.example.tococd.view.adapter.TypesAdapter
-import com.example.tococd.viewmodel.TypesViewModel
 
 class TypesFragment : Fragment() {
 
@@ -91,7 +89,7 @@ class TypesFragment : Fragment() {
             .addActionButton(lasActionTypes)
 
 
-        takePictureAction.setOnClickListener {
+        /*takePictureAction.setOnClickListener {
             dialog.cancel()
             dialog2.show()
             SharedApp.prefs.types = "true"
@@ -105,7 +103,7 @@ class TypesFragment : Fragment() {
 
         if (SharedApp.prefs.types?.isEmpty() == true) {
             dialog.show()
-        }
+        }*/
 
         typesViewModel.getAllTypesList()
 

@@ -1,4 +1,4 @@
-package com.example.tococd.viewmodel
+package com.example.tococd.presentation.screens.types
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

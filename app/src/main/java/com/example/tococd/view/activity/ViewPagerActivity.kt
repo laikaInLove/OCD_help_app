@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.viewpager2.widget.ViewPager2
+import com.example.tococd.HomeActivity
 import com.example.tococd.R
 import com.example.tococd.view.adapter.ViewPagerAdapter
 import com.example.tococd.databinding.ViewPagerActivityBinding
@@ -20,9 +21,9 @@ class ViewPagerActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelected {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         // (If) for check if SharedApp is complete already
-        if (SharedApp.prefs.name?.isNotEmpty() == true) {
+        /*if (SharedApp.prefs.name?.isNotEmpty() == true) {
             startActivity(Intent(this, HomeActivity::class.java))
-        }
+        }*/
 
         super.onCreate(savedInstanceState)
         binding = ViewPagerActivityBinding.inflate(layoutInflater)

@@ -8,9 +8,9 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isEmpty
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
+import com.example.tococd.HomeActivity
 import com.example.tococd.R
 import com.example.tococd.databinding.ActivityYourNameIsBinding
-import com.example.tococd.utils.SharedApp.Companion.prefs
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
 
@@ -39,7 +39,7 @@ class YourNameIs : AppCompatActivity() {
             Log.d("sizeText", binding.editText.text?.length.toString())
             if (binding.editText.text?.length!! in 1..10) {
                 // Use shared preference (save)
-                SharedApp.prefs.name = binding.editText.text.toString()
+                //SharedApp.prefs.name = binding.editText.text.toString()
 
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)

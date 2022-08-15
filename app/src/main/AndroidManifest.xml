@@ -34,7 +34,7 @@
             android:name=".view.activity.ViewPagerActivity"
             android:exported="true" />
         <activity
-            android:name=".view.activity.HomeActivity"
+            android:name=".HomeActivity"
             android:exported="true">
         </activity>
     </application>

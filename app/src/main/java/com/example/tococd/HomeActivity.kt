@@ -1,19 +1,16 @@
-package com.example.tococd.view.activity
+package com.example.tococd
 
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import com.example.tococd.R
 import com.example.tococd.databinding.ActivityHomeBinding
-import com.example.tococd.view.fragment.InformationFragment
-import com.example.tococd.view.fragment.PsychologistsFragment
-import com.example.tococd.view.fragment.TypesFragment
+import com.example.tococd.presentation.screens.information.InformationFragment
+import com.example.tococd.presentation.screens.psychologist.PsychologistsFragment
+import com.example.tococd.presentation.screens.types.TypesFragment
 
 
 class HomeActivity : AppCompatActivity() {
@@ -24,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
 
     private val informationFragment = InformationFragment()
     private val typesFragment = TypesFragment()
-    private val psychologistsFragment =PsychologistsFragment()
+    private val psychologistsFragment = PsychologistsFragment()
     private var activeFragment: Fragment = informationFragment
 
 

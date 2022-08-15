@@ -1,4 +1,4 @@
-package com.example.tococd.view.fragment
+package com.example.tococd.presentation.screens.information
 
 import android.graphics.Color
 import android.os.Bundle
@@ -14,10 +14,8 @@ import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.amrdeveloper.lottiedialog.LottieDialog
 import com.example.tococd.R
-import com.example.tococd.view.adapter.InformationAdapter
 import com.example.tococd.databinding.FragmentInformationBinding
 import com.example.tococd.model.InformationModel
-import com.example.tococd.viewmodel.InformationViewModel
 
 
 class InformationFragment : Fragment() {
@@ -77,7 +75,7 @@ class InformationFragment : Fragment() {
             //.setDialogBackgroundDrawable()
             .addActionButton(lastActionInformation)
 
-        takePictureAction.setOnClickListener {
+      /*  takePictureAction.setOnClickListener {
             dialog.cancel()
             dialog2.show()
             SharedApp.prefs.information = "true"
@@ -92,11 +90,11 @@ class InformationFragment : Fragment() {
 
         if (SharedApp.prefs.information?.isEmpty() == true){
             dialog.show()
-        }
+        }*/
 
 
-        // Use shared preference (show)
-        binding.yourNameHere.text = ("\uD83D\uDC4B Hi " + SharedApp.prefs.name)
+       /* // Use shared preference (show)
+        binding.yourNameHere.text = ("\uD83D\uDC4B Hi " + SharedApp.prefs.name)*/
 
         //informationViewModel.getAllInformationList()
         informationViewModel.informationList.observe(viewLifecycleOwner, Observer { value ->
