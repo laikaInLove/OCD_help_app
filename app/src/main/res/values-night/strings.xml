@@ -17,4 +17,6 @@
     <string name="second_page_onboarding_description">We know how confusing, stressful, anxious and frustrating OCD can be, yet there is recovery and the first step to begin recovery is to get informed and know how OCD works.</string>
     <string name="third_page_onboarding_title">That\'s why UsHelp is here to answer all your questions!</string>
     <string name="third_page_onboarding_description">UsHelp has been created to solve the most frequently asked questions about OCD, plus you\'ll find OCD specialists to help you and your loved ones.</string>
+    <string name="invalid_name">Incorrect name</string>
+    <string name="invalid_name_length">Make sure your name contains characters but not exceed 10 characters</string>
 </resources>

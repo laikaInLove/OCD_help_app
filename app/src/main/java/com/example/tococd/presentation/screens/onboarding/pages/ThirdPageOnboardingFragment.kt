@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.tococd.HomeActivity
+import com.example.tococd.R
 import com.example.tococd.databinding.FragmentThirdPageOnboardingBinding
 import com.example.tococd.presentation.screens.onboarding.OnboardingViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,19 +35,12 @@ class ThirdPageOnboardingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.startOptionThirdPageBtn.setOnClickListener {
             onboardingViewModel.saveOnboardingDisplayed()
-            goToHome()
+            findNavController().navigate(R.id.action_onboardingFragment_to_registerFragment)
         }
     }
 
     override fun onDestroyView() {
         _binding = null
         super.onDestroyView()
-    }
-
-    private fun goToHome() {
-        Intent(requireContext(), HomeActivity::class.java).apply {
-            startActivity(this)
-            activity?.finish()
-        }
     }
 }

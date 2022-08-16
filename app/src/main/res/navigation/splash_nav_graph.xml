@@ -9,7 +9,16 @@
         android:id="@+id/onboardingFragment"
         android:name="com.example.tococd.presentation.screens.onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" />
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/registerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashPageFragment"
         android:name="com.example.tococd.presentation.screens.splash.SplashPageFragment"
@@ -25,4 +34,9 @@
             app:popUpTo="@id/splashPageFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.tococd.presentation.screens.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 </navigation>

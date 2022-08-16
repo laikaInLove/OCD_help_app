@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/waves_blue">
+    android:background="@drawable/waves_blue"
+    tools:context=".presentation.screens.register.RegisterFragment">
 
     <TextView
         android:id="@+id/would_name"
@@ -46,7 +47,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/writing"
+        android:id="@+id/nameTil"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:hint="@string/hintName"
@@ -72,7 +73,7 @@
         app:startIconDrawable="@drawable/ic_baseline_favorite_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText"
+            android:id="@+id/nameTie"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/blue_rocoso_button"
@@ -92,6 +93,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="0.939"
+        app:lottie_rawRes="@raw/start_button_obscure" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
