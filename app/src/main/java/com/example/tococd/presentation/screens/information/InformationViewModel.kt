@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.tococd.di.IoDispatcher
 import com.example.tococd.domain.repository.DataStoreOperations
-import com.example.tococd.model.InformationModel
-import com.example.tococd.model.InformationProvider
+import com.example.tococd.domain.model.InformationModel
+import com.example.tococd.domain.model.InformationProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.*

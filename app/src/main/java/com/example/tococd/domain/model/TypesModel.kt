@@ -1,4 +1,4 @@
-package com.example.tococd.model
+package com.example.tococd.domain.model
 
 data class TypesModel(
     val imageTypes: String,

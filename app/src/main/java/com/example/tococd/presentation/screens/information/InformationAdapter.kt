@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tococd.databinding.CardLayoutBinding
-import com.example.tococd.model.InformationModel
+import com.example.tococd.domain.model.InformationModel
 import com.example.tococd.presentation.util.BaseAdapter
 import com.example.tococd.utils.extension.loadImage
 

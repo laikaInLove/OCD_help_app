@@ -1,4 +1,4 @@
-package com.example.tococd.model
+package com.example.tococd.domain.model
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

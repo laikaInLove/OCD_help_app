@@ -1,8 +1,8 @@
 package com.example.tococd.presentation.screens.types
 
 import androidx.lifecycle.ViewModel
-import com.example.tococd.model.TypesModel
-import com.example.tococd.model.TypesProvider
+import com.example.tococd.domain.model.TypesModel
+import com.example.tococd.domain.model.TypesProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

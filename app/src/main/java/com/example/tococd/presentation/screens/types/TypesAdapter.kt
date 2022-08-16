@@ -3,16 +3,13 @@ package com.example.tococd.presentation.screens.types
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.example.tococd.R
 import com.example.tococd.databinding.CardTypesBinding
-import com.example.tococd.model.TypesModel
+import com.example.tococd.domain.model.TypesModel
 import com.example.tococd.presentation.util.BaseAdapter
 import com.example.tococd.utils.extension.loadUrlImage
 

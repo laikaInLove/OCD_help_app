@@ -1,4 +1,4 @@
-package com.example.tococd.model
+package com.example.tococd.domain.model
 
 class InformationModel(
     val imageDescription: Int,
