@@ -89,6 +89,15 @@ class PsychologistsFragment : Fragment() {
             coroutineScope.launch {
                 psychologistViewModel.psychologistUiState.collect(::handlePsychologistState)
             }
+
+            coroutineScope.launch {
+                psychologistViewModel.psychologistDisplayedFirstTime.collect { displayed ->
+                    if (!displayed) {
+                        showDialog()
+                        psychologistViewModel.saveDisplayedFirstTime()
+                    }
+                }
+            }
         }
     }
 

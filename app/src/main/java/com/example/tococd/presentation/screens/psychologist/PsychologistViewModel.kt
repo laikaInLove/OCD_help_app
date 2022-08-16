@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.tococd.di.IoDispatcher
 import com.example.tococd.domain.common.fold
+import com.example.tococd.domain.repository.DataStoreOperations
 import com.example.tococd.domain.repository.PsychologistRepository
 import com.example.tococd.presentation.screens.psychologist.state.Effect
 import com.example.tococd.presentation.screens.psychologist.state.PsychologistUiState
@@ -18,6 +19,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PsychologistViewModel @Inject constructor(
     private val psychologistRepository: PsychologistRepository,
+    private val dataStoreOperations: DataStoreOperations,
     @IoDispatcher private val dispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
@@ -29,6 +31,8 @@ class PsychologistViewModel @Inject constructor(
 
     private val _effect: Channel<Effect> = Channel(Channel.UNLIMITED)
     val effect: Flow<Effect> = _effect.receiveAsFlow()
+
+    val psychologistDisplayedFirstTime = dataStoreOperations.getPsychologist()
 
     fun getPsychologists() {
         _effect.setEffect(Effect.IsLoading(true))
@@ -57,6 +61,12 @@ class PsychologistViewModel @Inject constructor(
                     _effect.setEffect(Effect.IsLoading(false))
                 }
             )
+        }
+    }
+
+    fun saveDisplayedFirstTime() {
+        viewModelScope.launch(dispatcher) {
+            dataStoreOperations.savePsychologist(true)
         }
     }
 }
