@@ -12,8 +12,10 @@ import androidx.fragment.app.viewModels
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.amrdeveloper.lottiedialog.LottieDialog
+import com.example.tococd.OCDApp
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentTypesLayoutBinding
+import com.example.tococd.utils.extension.initUrl
 import com.example.tococd.utils.extension.observeFlows
 import kotlinx.coroutines.launch
 
@@ -23,7 +25,7 @@ class TypesFragment : Fragment() {
     private val binding: FragmentTypesLayoutBinding
         get() = _binding!!
     private val typesViewModel: TypesViewModel by viewModels()
-    private val typesAdapter: TypesAdapter by lazy { TypesAdapter() }
+    private val typesAdapter: TypesAdapter by lazy { TypesAdapter(::handleUrl) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -141,6 +143,10 @@ class TypesFragment : Fragment() {
             adapter = typesAdapter
             setHasFixedSize(true)
         }
+    }
+
+    private fun handleUrl(url: String) {
+        activity?.initUrl(url)
     }
 
     private fun setUpCollectors() {

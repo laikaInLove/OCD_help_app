@@ -1,61 +1,45 @@
 package com.example.tococd.presentation.screens.psychologist
 
-import android.content.Intent
-import android.net.Uri
-import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.tococd.R
 import com.example.tococd.databinding.CardPsychologistsBinding
-import com.example.tococd.data.remote.response.PsychologistsResponse
+import com.example.tococd.domain.model.Psychologist
+import com.example.tococd.presentation.util.BaseAdapter
+import com.example.tococd.presentation.util.BaseViewHolder
+import com.example.tococd.utils.extension.loadUrlImage
+import com.example.tococd.utils.extension.viewBinding
 
-class PsychologistsAdapter(private val psychologistList: List<PsychologistsResponse>) :
-    RecyclerView.Adapter<PsychologistsAdapter.PsychologistsVH>() {
-
-    class PsychologistsVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val binding = CardPsychologistsBinding.bind(itemView)
-    }
+class PsychologistsAdapter(
+    private val onClickItem: (url: String) -> Unit
+) :
+    BaseAdapter<Psychologist, CardPsychologistsBinding>(
+        areItemsTheSame = { oldItem, newItem -> oldItem.id == newItem.id },
+        areContentsTheSame = { oldItem, newItem -> oldItem == newItem }
+    ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PsychologistsVH {
-        val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.card_psychologists, parent, false)
-        return PsychologistsVH(view)
+        val binding = parent.viewBinding(CardPsychologistsBinding::inflate, false)
+        return PsychologistsVH(binding)
     }
 
-    override fun onBindViewHolder(holder: PsychologistsVH, position: Int) {
-        val psychologists: PsychologistsResponse = psychologistList[position]
-        holder.binding.psychologistName.text = psychologists.name
-        holder.binding.contactPsychologist.text = "Contact"
-        holder.binding.psychologistSpecialist.text = psychologists.specialties
+    inner class PsychologistsVH(viewBinding: CardPsychologistsBinding) :
+        BaseViewHolder<CardPsychologistsBinding, Psychologist>(viewBinding) {
 
-        //Load image with Glide
-        Glide.with(holder.binding.root.context)
-            .load(psychologists.imagePerson)
-            .error(R.drawable.ic_error_conection)
-            .into(holder.binding.imagePsychologist)
+        override fun bind(item: Psychologist) {
+            with(binding) {
+                psychologistName.text = item.name
+                contactPsychologist.text = "Contact"
+                psychologistSpecialist.text = item.specialties
+                imagePsychologist.loadUrlImage(item.imagePerson)
+                imagePsychologistType.loadUrlImage(item.imageType)
+                imagePsychologistLanguage.loadUrlImage(item.imageCountry)
+            }
+            setUpListeners(item)
+        }
 
-        Glide.with(holder.binding.root.context)
-            .load(psychologists.imageType)
-            .error(R.drawable.ic_error_conection)
-            .into(holder.binding.imagePsychologistType)
-
-        Glide.with(holder.binding.root.context)
-            .load(psychologists.imageCountry)
-            .error(R.drawable.ic_error_conection)
-            .into(holder.binding.imagePsychologistLanguage)
-
-        holder.binding.contactPsychologist.setOnClickListener {
-            val url = Uri.parse(psychologists.contact)
-
-            val intent = Intent(Intent.ACTION_VIEW, url)
-            holder.binding.root.context.startActivity(intent)
+        private fun setUpListeners(psychologist: Psychologist) {
+            binding.contactPsychologist.setOnClickListener {
+                onClickItem(psychologist.contact)
+            }
         }
     }
-
-    override fun getItemCount(): Int {
-        return psychologistList.size
-    }
-
 }

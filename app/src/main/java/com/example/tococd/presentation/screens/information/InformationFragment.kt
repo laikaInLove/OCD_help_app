@@ -14,6 +14,7 @@ import com.example.tococd.databinding.FragmentInformationBinding
 import com.example.tococd.utils.extension.hide
 import com.example.tococd.utils.extension.observeFlows
 import com.example.tococd.utils.extension.show
+import com.example.tococd.utils.extension.showOnboardingDialog
 import com.google.android.material.button.MaterialButton
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -58,28 +59,14 @@ class InformationFragment : Fragment() {
     }
 
     private fun showDialog() {
-        val context = requireContext()
-        val alertDialog = AlertDialog.Builder(context).setCancelable(false)
-        val view =
-            LayoutInflater.from(context).inflate(R.layout.dialog_welcome_information_screen, null)
-        val customDialog = alertDialog
-            .setView(view)
-            .create()
-        val dialogButton = view.findViewById<MaterialButton>(R.id.informationAreaBtn)
-        val lottieView = view.findViewById<LottieAnimationView>(R.id.informationAreaImageLav)
-        val descriptionText = view.findViewById<TextView>(R.id.informationAreaDescriptionTv)
-
-        dialogButton.setOnClickListener {
-            if (dialogButton.text.equals(getString(R.string.close_option))) {
-                customDialog.dismiss()
-            } else {
-                lottieView.setAnimation(R.raw.touch)
-                lottieView.playAnimation()
-                descriptionText.text = getString(R.string.touch_description)
-                dialogButton.text = getString(R.string.close_option)
-            }
-        }
-        customDialog.show()
+        context?.showOnboardingDialog(
+            titleId = R.string.information_area_title,
+            descriptionId = R.string.information_area_description,
+            secondTitleId = R.string.information_area_title,
+            secondDescriptionId = R.string.touch_description,
+            lottieAnimationView = R.raw.bear_sad,
+            secondLottieAnimationView = R.raw.touch
+        )
     }
 
     private fun setUpCollectors() {
