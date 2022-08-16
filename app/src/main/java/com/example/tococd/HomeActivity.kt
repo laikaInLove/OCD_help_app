@@ -6,8 +6,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.tococd.databinding.ActivityHomeBinding
-import com.example.tococd.utils.extension.hide
-import com.example.tococd.utils.extension.show
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,18 +23,6 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.navHostContainer) as NavHostFragment
         navController = navHostFragment.navController
         binding.bottomNavigation.setupWithNavController(navController)
-        setUpListeners()
-    }
-
-    private fun setUpListeners() {
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            with(binding) {
-                when (destination.label) {
-                    "fragment_onboarding" -> bottomNavigation.hide()
-                    else -> bottomNavigation.show()
-                }
-            }
-        }
     }
 }
 
