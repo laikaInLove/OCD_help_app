@@ -9,4 +9,12 @@
     <string name="touch_description">Touch each card to display all the information and answer your questions.</string>
     <string name="close_option">Close</string>
     <string name="user_name">Hi %1$s</string>
+    <string name="next_option">Next</string>
+    <string name="start_option">Start</string>
+    <string name="first_page_onboarding_title">Are You confused and have questions?</string>
+    <string name="first_page_onboarding_description">OCD generates many doubts and questions such as: What is OCD? Do I have OCD? How can I get better? Well, here you will find the answer to these and other questions.</string>
+    <string name="second_page_onboarding_title">OCD can be very confusing and stressful...</string>
+    <string name="second_page_onboarding_description">We know how confusing, stressful, anxious and frustrating OCD can be, yet there is recovery and the first step to begin recovery is to get informed and know how OCD works.</string>
+    <string name="third_page_onboarding_title">That\'s why UsHelp is here to answer all your questions!</string>
+    <string name="third_page_onboarding_description">UsHelp has been created to solve the most frequently asked questions about OCD, plus you\'ll find OCD specialists to help you and your loved ones.</string>
 </resources>

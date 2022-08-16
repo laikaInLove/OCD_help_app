@@ -3,10 +3,12 @@ package com.example.tococd.data.local.preferences
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.tococd.domain.repository.DataStoreOperations
+import com.example.tococd.utils.Constants.ONBOARDING_DISPLAYED
 import com.example.tococd.utils.Constants.PREFERENCES_NAME
 import com.example.tococd.utils.Constants.SHARED_INFORMATION
 import com.example.tococd.utils.Constants.SHARED_NAME
@@ -28,6 +30,8 @@ class DataStoreOperationsImpl @Inject constructor(context: Context) : DataStoreO
         val information = stringPreferencesKey(SHARED_INFORMATION)
         val types = stringPreferencesKey(SHARED_TYPES)
         val psychologist = stringPreferencesKey(SHARED_PSYCHOLOGISTS)
+        val onboarding = booleanPreferencesKey(ONBOARDING_DISPLAYED)
+
     }
 
     override suspend fun saveName(name: String) {
@@ -79,6 +83,19 @@ class DataStoreOperationsImpl @Inject constructor(context: Context) : DataStoreO
         return dataStore.data.handleException()
             .map { preferences ->
                 preferences[PreferencesKeys.psychologist] ?: ""
+            }
+    }
+
+    override suspend fun setOnboardingDisplayed(isDisplayed: Boolean) {
+        dataStore.edit { preferences ->
+            preferences[PreferencesKeys.onboarding] = isDisplayed
+        }
+    }
+
+    override fun getOnboardingDisplayed(): Flow<Boolean> {
+        return dataStore.data.handleException()
+            .map { preferences ->
+                preferences[PreferencesKeys.onboarding] ?: false
             }
     }
 }

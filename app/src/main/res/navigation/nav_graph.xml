@@ -22,5 +22,4 @@
         android:name="com.example.tococd.presentation.screens.psychologist.PsychologistsFragment"
         android:label="Psychologists"
         tools:layout="@layout/fragment_psychologists"/>
-
 </navigation>

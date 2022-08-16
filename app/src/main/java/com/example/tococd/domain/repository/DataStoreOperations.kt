@@ -14,4 +14,7 @@ interface DataStoreOperations {
 
     suspend fun savePsychologist(name: String)
     fun getPsychologist(): Flow<String>
+
+    suspend fun setOnboardingDisplayed(isDisplayed: Boolean)
+    fun getOnboardingDisplayed(): Flow<Boolean>
 }

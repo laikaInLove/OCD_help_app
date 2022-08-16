@@ -19,8 +19,7 @@
         android:name=".OCDApp">
         <activity
             android:name=".presentation.screens.splash.SplashScreenActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,9 +28,6 @@
         </activity>
         <activity
             android:name=".view.activity.YourNameIs"
-            android:exported="true" />
-        <activity
-            android:name=".view.activity.ViewPagerActivity"
             android:exported="true" />
         <activity
             android:name=".HomeActivity"

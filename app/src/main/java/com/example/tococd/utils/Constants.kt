@@ -7,4 +7,5 @@ object Constants {
     const val SHARED_INFORMATION = "shared_information"
     const val SHARED_TYPES = "shared_types"
     const val SHARED_PSYCHOLOGISTS = "shared_psychologists"
+    const val ONBOARDING_DISPLAYED = "onboarding_displayed"
 }
