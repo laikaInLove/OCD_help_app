@@ -9,11 +9,11 @@ interface DataStoreOperations {
     suspend fun saveInformation(name: String)
     fun getInformation(): Flow<String>
 
-    suspend fun saveTypes(name: String)
-    fun getTypes(): Flow<String>
+    suspend fun saveTypes(displayed: Boolean)
+    fun getTypes(): Flow<Boolean>
 
-    suspend fun savePsychologist(name: String)
-    fun getPsychologist(): Flow<String>
+    suspend fun savePsychologist(displayed: Boolean)
+    fun getPsychologist(): Flow<Boolean>
 
     suspend fun setOnboardingDisplayed(isDisplayed: Boolean)
     fun getOnboardingDisplayed(): Flow<Boolean>

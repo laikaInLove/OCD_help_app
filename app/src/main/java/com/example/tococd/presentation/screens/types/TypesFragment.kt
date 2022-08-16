@@ -11,8 +11,10 @@ import com.example.tococd.databinding.FragmentTypesLayoutBinding
 import com.example.tococd.utils.extension.initUrl
 import com.example.tococd.utils.extension.observeFlows
 import com.example.tococd.utils.extension.showOnboardingDialog
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class TypesFragment : Fragment() {
 
     private var _binding: FragmentTypesLayoutBinding? = null
@@ -74,6 +76,16 @@ class TypesFragment : Fragment() {
             coroutineScope.launch {
                 typesViewModel.typesList.collect { typesState ->
                     typesAdapter.submitList(typesState.types)
+                }
+            }
+
+            coroutineScope.launch {
+                typesViewModel.typesDisplayedFirstTime.collect { displayed ->
+                    if (!displayed) {
+                        showDialog()
+                    } else {
+                        typesViewModel.saveDisplayedFirstTime()
+                    }
                 }
             }
         }

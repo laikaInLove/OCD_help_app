@@ -28,8 +28,8 @@ class DataStoreOperationsImpl @Inject constructor(context: Context) : DataStoreO
     private object PreferencesKeys {
         val name = stringPreferencesKey(SHARED_NAME)
         val information = stringPreferencesKey(SHARED_INFORMATION)
-        val types = stringPreferencesKey(SHARED_TYPES)
-        val psychologist = stringPreferencesKey(SHARED_PSYCHOLOGISTS)
+        val types = booleanPreferencesKey(SHARED_TYPES)
+        val psychologist = booleanPreferencesKey(SHARED_PSYCHOLOGISTS)
         val onboarding = booleanPreferencesKey(ONBOARDING_DISPLAYED)
 
     }
@@ -60,29 +60,29 @@ class DataStoreOperationsImpl @Inject constructor(context: Context) : DataStoreO
             }
     }
 
-    override suspend fun saveTypes(name: String) {
+    override suspend fun saveTypes(displayed: Boolean) {
         dataStore.edit { preferences ->
-            preferences[PreferencesKeys.types] = name
+            preferences[PreferencesKeys.types] = displayed
         }
     }
 
-    override fun getTypes(): Flow<String> {
+    override fun getTypes(): Flow<Boolean> {
         return dataStore.data.handleException()
             .map { preferences ->
-                preferences[PreferencesKeys.types] ?: ""
+                preferences[PreferencesKeys.types] ?: false
             }
     }
 
-    override suspend fun savePsychologist(name: String) {
+    override suspend fun savePsychologist(displayed: Boolean) {
         dataStore.edit { preferences ->
-            preferences[PreferencesKeys.psychologist] = name
+            preferences[PreferencesKeys.psychologist] = displayed
         }
     }
 
-    override fun getPsychologist(): Flow<String> {
+    override fun getPsychologist(): Flow<Boolean> {
         return dataStore.data.handleException()
             .map { preferences ->
-                preferences[PreferencesKeys.psychologist] ?: ""
+                preferences[PreferencesKeys.psychologist] ?: false
             }
     }
 
