@@ -1,6 +1,8 @@
 package com.example.tococd.utils.extension
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import androidx.annotation.StringRes
 import com.example.tococd.R
 import www.sanju.motiontoast.MotionToast
@@ -16,4 +18,11 @@ fun Activity.showMotionToastError(@StringRes titleId: Int, @StringRes messageId:
         MotionToast.LONG_DURATION,
         resources.getFont(R.font.helvetica)
     )
+}
+
+fun Activity.initUrl(url: String) {
+    val uri = Uri.parse(url)
+    Intent(Intent.ACTION_VIEW, uri).apply {
+        startActivity(this)
+    }
 }

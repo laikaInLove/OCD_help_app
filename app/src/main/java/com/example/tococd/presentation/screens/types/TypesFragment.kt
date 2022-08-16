@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.airbnb.lottie.LottieAnimationView
-import com.airbnb.lottie.LottieDrawable
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentTypesLayoutBinding
 import com.example.tococd.utils.extension.initUrl

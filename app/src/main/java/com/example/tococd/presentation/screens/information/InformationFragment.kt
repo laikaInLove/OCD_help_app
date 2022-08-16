@@ -4,18 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.airbnb.lottie.LottieAnimationView
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentInformationBinding
 import com.example.tococd.utils.extension.hide
 import com.example.tococd.utils.extension.observeFlows
 import com.example.tococd.utils.extension.show
 import com.example.tococd.utils.extension.showOnboardingDialog
-import com.google.android.material.button.MaterialButton
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
