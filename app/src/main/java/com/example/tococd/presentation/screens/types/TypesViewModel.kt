@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
 class TypesViewModel : ViewModel() {
-    private val _typesList = MutableStateFlow<TypesUiState>(TypesUiState())
+    private val _typesList:MutableStateFlow<TypesUiState> = MutableStateFlow(TypesUiState())
     val typesList: StateFlow<TypesUiState> = _typesList.asStateFlow()
 
-    fun getAllTypesList() {
+    private fun getAllTypesList() {
         val list = TypesProvider.getAll()
         _typesList.update { state -> state.copy(types = list) }
     }
