@@ -28,4 +28,5 @@
     <string name="types_dialog_title">Types of OCD Area</string>
     <string name="types_dialog_description">Welcome to the OCD Types area, here you will find information on the most common types of OCD</string>
     <string name="psychologitst_dialog_second_description">You can also click on the blue icon on the right to see much more information on specialized websites.</string>
+    <string name="information_area_description_header">Solve your doubts about OCD here</string>
 </resources>
