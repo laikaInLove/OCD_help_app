@@ -83,7 +83,6 @@ class TypesFragment : Fragment() {
                 typesViewModel.typesDisplayedFirstTime.collect { displayed ->
                     if (!displayed) {
                         showDialog()
-                    } else {
                         typesViewModel.saveDisplayedFirstTime()
                     }
                 }

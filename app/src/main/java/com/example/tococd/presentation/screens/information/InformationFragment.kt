@@ -74,8 +74,8 @@ class InformationFragment : Fragment() {
             }
 
             coroutineScope.launch {
-                informationViewModel.informationDisplayedFirstTime.collect {
-                    if (it.isEmpty()) {
+                informationViewModel.informationDisplayedFirstTime.collect { displayed ->
+                    if (!displayed) {
                         showDialog()
                         informationViewModel.saveDisplayedFirstTime()
                     }

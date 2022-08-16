@@ -24,7 +24,7 @@ class InformationViewModel @Inject constructor(
 
     fun saveDisplayedFirstTime() {
         viewModelScope.launch(dispatcher) {
-            dataStoreOperations.saveInformation("true")
+            dataStoreOperations.saveInformation(true)
         }
     }
 

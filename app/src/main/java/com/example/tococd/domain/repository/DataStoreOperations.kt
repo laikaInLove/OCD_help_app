@@ -6,8 +6,8 @@ interface DataStoreOperations {
     suspend fun saveName(name: String)
     fun getName(): Flow<String>
 
-    suspend fun saveInformation(name: String)
-    fun getInformation(): Flow<String>
+    suspend fun saveInformation(displayed: Boolean)
+    fun getInformation(): Flow<Boolean>
 
     suspend fun saveTypes(displayed: Boolean)
     fun getTypes(): Flow<Boolean>

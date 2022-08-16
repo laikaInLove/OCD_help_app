@@ -27,7 +27,7 @@ class DataStoreOperationsImpl @Inject constructor(context: Context) : DataStoreO
 
     private object PreferencesKeys {
         val name = stringPreferencesKey(SHARED_NAME)
-        val information = stringPreferencesKey(SHARED_INFORMATION)
+        val information = booleanPreferencesKey(SHARED_INFORMATION)
         val types = booleanPreferencesKey(SHARED_TYPES)
         val psychologist = booleanPreferencesKey(SHARED_PSYCHOLOGISTS)
         val onboarding = booleanPreferencesKey(ONBOARDING_DISPLAYED)
@@ -47,16 +47,16 @@ class DataStoreOperationsImpl @Inject constructor(context: Context) : DataStoreO
             }
     }
 
-    override suspend fun saveInformation(name: String) {
+    override suspend fun saveInformation(displayed: Boolean) {
         dataStore.edit { preferences ->
-            preferences[PreferencesKeys.information] = name
+            preferences[PreferencesKeys.information] = displayed
         }
     }
 
-    override fun getInformation(): Flow<String> {
+    override fun getInformation(): Flow<Boolean> {
         return dataStore.data.handleException()
             .map { preferences ->
-                preferences[PreferencesKeys.information] ?: ""
+                preferences[PreferencesKeys.information] ?: false
             }
     }
 
