@@ -27,9 +27,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.YourNameIs"
-            android:exported="true" />
-        <activity
             android:name=".HomeActivity"
             android:exported="true">
             <!--<intent-filter>
