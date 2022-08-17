@@ -84,16 +84,16 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.airbnb.lottie.LottieAnimationView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_name"
-        android:layout_width="wrap_content"
-        android:layout_height="285dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/start_option"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:backgroundTint="@null"
+        android:background="@drawable/blue_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939"
-        app:lottie_rawRes="@raw/start_button_obscure" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
