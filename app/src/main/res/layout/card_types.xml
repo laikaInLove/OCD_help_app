@@ -1,86 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/information_card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/tools"
-    android:id="@+id/information_card_view"
-    android:layout_margin="28dp"
-    android:padding="8dp"
-    android:background="@color/secondary_sub_gray"
-    app:cardCornerRadius="20dp"
     app:cardBackgroundColor="@color/white"
-    card_view:cardElevation="3dp"
-    card_view:contentPadding="10dp">
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/typesTitle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/typesButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Damage OCD" />
 
-            <TextView
-                android:id="@+id/typesTitle"
-                android:layout_width="230dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
-                android:paddingStart="15dp"
-                android:paddingTop="15dp"
-                android:text="Damage OCD"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/typesButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/information_speech"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/typesButton"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="28dp"
-                android:background="@color/white"
-                android:clickable="true"
-                android:paddingStart="5dp"
-                android:paddingTop="3dp"
-                android:scaleType="fitCenter"
-                android:soundEffectsEnabled="true"
-                android:src="@drawable/ic_arrow_icon" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/typesDescription"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/opensans_light"
+            android:textAlignment="textStart"
+            android:textColor="@color/soft_black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewTypes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typesTitle"
+            tools:text="Damage OCD" />
 
-            <TextView
-                android:id="@+id/typesDescription"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/opensans_light"
-                android:paddingStart="15dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="15dp"
-                android:text="Damage OCD"
-                android:textAlignment="textStart"
-                android:textColor="@color/soft_black"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imageViewTypes"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic__information"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/typesButton"
+            app:layout_constraintStart_toStartOf="@id/typesButton"
+            app:layout_constraintTop_toBottomOf="@+id/typesButton" />
 
-            <ImageView
-                android:id="@+id/imageViewTypes"
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-                android:paddingStart="16dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="10dp"
-                android:src="@drawable/ic__information" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

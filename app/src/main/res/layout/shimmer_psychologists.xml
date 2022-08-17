@@ -1,52 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shimmer_card_psychologist_layout"
     android:layout_width="match_parent"
-    android:layout_height="480dp"
+    android:layout_height="wrap_content"
     android:background="@color/secondary_sub_gray">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_psychologist"
         android:layout_width="wrap_content"
-        android:layout_height="440dp"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/speech_bubble"
-        android:padding="5dp"
-        android:paddingBottom="1000dp"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_psychologist"
             android:layout_width="240dp"
             android:layout_height="240dp"
             android:src="@drawable/c8c9c9_shimmer"
-            app:civ_border_color="#C8C8C9"
-            app:civ_border_overlay="true"
-            app:civ_border_width="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.01" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_psychologist_type"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:src="@drawable/c8c9c9_shimmer"
-            app:civ_border_color="#C8C8C9"
-            app:civ_border_width="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.78"
+            app:layout_constraintHorizontal_bias="0.85"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.477" />
@@ -56,11 +44,9 @@
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:src="@drawable/c8c9c9_shimmer"
-            app:civ_border_color="#C8C8C9"
-            app:civ_border_width="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.043" />
@@ -69,51 +55,34 @@
             android:id="@+id/psychologist_name"
             android:layout_width="200dp"
             android:layout_height="20dp"
+            android:layout_marginVertical="16dp"
             android:background="#C9C9C8"
-            android:fontFamily="@font/poppins_regular"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/psychologist_specialist"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638" />
+            app:layout_constraintTop_toBottomOf="@+id/image_psychologist" />
 
         <TextView
             android:id="@+id/psychologist_specialist"
             android:layout_width="250dp"
             android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
             android:background="#C9C9C8"
-            android:fontFamily="@font/helvetica_regular"
-            android:textAlignment="center"
-            android:textColor="@color/grass_green"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/contact_psychologist"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.813" />
+            app:layout_constraintTop_toBottomOf="@+id/psychologist_name" />
 
         <Button
             android:id="@+id/contact_psychologist"
             android:layout_width="315dp"
             android:layout_height="49dp"
             android:background="@drawable/shimmer_button"
-            android:textAlignment="textStart"
-            android:textColor="@color/soft_black"
-            android:textSize="16sp"
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.578"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.982" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintStart_toStartOf="parent" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

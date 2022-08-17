@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -17,7 +19,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL",  "\"https://fast-bastion-71098.herokuapp.com/api/\""
+        }
         release {
+            buildConfigField "String", "BASE_URL",  "\"https://fast-bastion-71098.herokuapp.com/api/\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -35,6 +41,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes true
+}
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
@@ -43,11 +53,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0-alpha04'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.0-alpha04'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation("androidx.cardview:cardview:1.0.0")
-
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
@@ -63,7 +69,7 @@ dependencies {
     //For control over item selection of both touch and mouse driven selection
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
     //Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.2"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     //MotionToast
     implementation 'com.github.Spikeysanju:MotionToast:1.4'
@@ -72,21 +78,25 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
     //Lottie
     implementation 'com.airbnb.android:lottie:5.2.0'
-    implementation "com.github.AchmadHafid:LottieDialog:4.12.0"
-    implementation 'io.github.amrdeveloper:lottiedialog:1.0.0'
     //Retrofit2
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    /** OkHttp */
+    implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     //CircularImage
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     //Shimmer
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
-    //ChipNavigation
-    implementation 'com.github.ismaeldivita:chip-navigation-bar:1.4.0'
-    //WaveAnimation
-    //implementation 'com.scwang.wave:MultiWaveHeader:1.0.0'
+    /** Dagger hilt */
+    implementation "com.google.dagger:hilt-android:$dagger_version"
+    kapt "com.google.dagger:hilt-compiler:$dagger_version"
+    /** Data store */
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
 
-
-    implementation 'com.google.dagger:hilt-android:2.38.1'
+    /** Testing */
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 }
