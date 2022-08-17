@@ -5,13 +5,16 @@
     android:id="@+id/card_psychologist_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardUseCompatPadding="true">
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="18dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="@color/deep_pool"
+    app:strokeWidth="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_psychologist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/radius_middle">
+        android:layout_height="wrap_content">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_psychologist"

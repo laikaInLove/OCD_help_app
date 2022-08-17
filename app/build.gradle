@@ -20,10 +20,10 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField "String", "BASE_URL",  "\"https://http-nodejs-production-7013.up.railway.app/api/\""
+            buildConfigField "String", "BASE_URL",  "\"https://fast-bastion-71098.herokuapp.com/api/\""
         }
         release {
-            buildConfigField "String", "BASE_URL",  "\"https://http-nodejs-production-7013.up.railway.app/api/\""
+            buildConfigField "String", "BASE_URL",  "\"https://fast-bastion-71098.herokuapp.com/api/\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
