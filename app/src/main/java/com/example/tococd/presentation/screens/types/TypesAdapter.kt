@@ -21,7 +21,6 @@ class TypesAdapter(private val onItemClick: (url: String) -> Unit) :
             with(binding) {
                 typesTitle.text = item.tittleTypes
                 typesDescription.text = item.descriptionTypes
-                typesButton.setImageResource(R.drawable.information_speech)
                 imageViewTypes.loadUrlImage(item.imageTypes)
             }
             setUpListeners(item)

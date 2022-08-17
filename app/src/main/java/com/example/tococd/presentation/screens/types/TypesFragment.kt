@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.tococd.R
-import com.example.tococd.databinding.FragmentTypesLayoutBinding
+import com.example.tococd.databinding.FragmentTypesBinding
 import com.example.tococd.utils.extension.initUrl
 import com.example.tococd.utils.extension.observeFlows
 import com.example.tococd.utils.extension.showOnboardingDialog
@@ -17,8 +17,8 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class TypesFragment : Fragment() {
 
-    private var _binding: FragmentTypesLayoutBinding? = null
-    private val binding: FragmentTypesLayoutBinding
+    private var _binding: FragmentTypesBinding? = null
+    private val binding: FragmentTypesBinding
         get() = _binding!!
     private val typesViewModel: TypesViewModel by viewModels()
     private val typesAdapter: TypesAdapter by lazy { TypesAdapter(::handleUrl) }
@@ -27,7 +27,7 @@ class TypesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTypesLayoutBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentTypesBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
