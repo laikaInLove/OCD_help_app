@@ -70,7 +70,7 @@
         <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_information.xml" value="0.25854782942758353" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_onboarding.xml" value="0.35052083333333334" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_psychologists.xml" value="0.35052083333333334" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_register.xml" value="0.35052083333333334" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_register.xml" value="0.1" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_second_page_onboarding.xml" value="0.33" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_splash_page.xml" value="0.1" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/ocd_help/app/src/main/res/layout/fragment_third_page_onboarding.xml" value="0.14722222222222223" />
@@ -88,5 +88,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>
