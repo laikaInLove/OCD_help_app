@@ -1,89 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/tools"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/information_card_view"
-    android:layout_margin="10dp"
-    android:padding="8dp"
-    app:cardCornerRadius="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
     app:cardBackgroundColor="@color/white"
-    card_view:cardElevation="3dp"
-    card_view:contentPadding="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
     app:cardUseCompatPadding="true">
 
-    <LinearLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="330dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tittle_information"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/what_is_the_OCD"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageDescriptionInformation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tittle_information"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
-                android:padding="10dp"
-                android:text="@string/what_is_the_OCD"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="08dp"
-                android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imageDescriptionInformation"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_help_person" />
 
-            <ImageView
-                android:id="@+id/imageDescriptionInformation"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="15dp"
-                android:scaleType="fitCenter"
-                tools:src="@drawable/ic_help_person" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/description_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/description_information"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/imageDescriptionInformation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tittle_information" />
 
         <TextView
             android:id="@+id/touch_information"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/touch_for_more_information"
             android:textColor="@color/soft_black"
             android:textSize="16sp"
-            android:layout_marginBottom="5dp"
             android:textStyle="italic"
-            android:visibility="visible"
-            android:layout_marginStart="08dp"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageDescriptionInformation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tittle_information" />
 
-        <RelativeLayout
-            android:id="@+id/expandable_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:visibility="visible">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            <TextView
-                android:id="@+id/description_information"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
-                android:padding="10dp"
-                android:text="@string/description_information"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

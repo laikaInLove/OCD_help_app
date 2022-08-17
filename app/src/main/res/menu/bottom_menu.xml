@@ -4,21 +4,14 @@
 
     <item
         android:id="@+id/information_fragment"
-        android:title="OCD Information"
-        android:icon="@drawable/ic_information_speech"
-        app:cnb_iconTintMode="@null"
-        app:cnb_iconColor="@color/azul_rocoso"/>
-
+        android:title="@string/ocd_information"
+        android:icon="@drawable/ic_information_speech" />
     <item
         android:id="@+id/ocd_types"
-        android:title="OCD Types"
-        android:icon="@drawable/ic_articles_types"
-        app:cnb_iconColor="@color/azul_rocoso"/>
-
+        android:title="@string/ocd_types"
+        android:icon="@drawable/ic_articles_types" />
     <item
         android:id="@+id/psychologist_fragment"
-        android:title="Seek help "
-        android:icon="@drawable/ic_search_help"
-        app:cnb_iconColor="@color/azul_rocoso"/>
-
+        android:title="@string/ocd_seek_help"
+        android:icon="@drawable/ic_search_help" />
 </menu>

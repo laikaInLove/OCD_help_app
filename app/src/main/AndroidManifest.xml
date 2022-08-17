@@ -16,11 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar"
         tools:targetApi="31"
-        android:name=".utils.SharedApp">
+        android:name=".OCDApp">
         <activity
-            android:name=".view.activity.SplashScreenActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:name=".presentation.screens.splash.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,14 +27,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.YourNameIs"
-            android:exported="true" />
-        <activity
-            android:name=".view.activity.ViewPagerActivity"
-            android:exported="true" />
-        <activity
-            android:name=".view.activity.HomeActivity"
+            android:name=".HomeActivity"
             android:exported="true">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
         </activity>
     </application>
 

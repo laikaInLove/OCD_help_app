@@ -7,20 +7,19 @@
 
     <fragment
         android:id="@+id/information_fragment"
-        android:name="com.example.tococd.view.fragment.InformationFragment"
+        android:name="com.example.tococd.presentation.screens.information.InformationFragment"
         android:label="Information"
         tools:layout="@layout/fragment_information"/>
 
     <fragment
         android:id="@+id/ocd_types"
-        android:name="com.example.tococd.view.fragment.TypesFragment"
+        android:name="com.example.tococd.presentation.screens.types.TypesFragment"
         android:label="Types"
         tools:layout="@layout/fragment_types"/>
 
     <fragment
         android:id="@+id/psychologist_fragment"
-        android:name="com.example.tococd.view.fragment.PsychologistsFragment"
+        android:name="com.example.tococd.presentation.screens.psychologist.PsychologistsFragment"
         android:label="Psychologists"
         tools:layout="@layout/fragment_psychologists"/>
-
 </navigation>
