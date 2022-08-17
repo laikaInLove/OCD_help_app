@@ -1,113 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/PsychologistFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/secondary_background_gray"
+    android:fillViewport="true"
+    android:orientation="vertical"
     android:tag="fragment_psychologist_tag"
     tools:context=".presentation.screens.psychologist.PsychologistsFragment">
 
-    <TextView
-        android:id="@+id/psychologistTitleTv"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:paddingStart="12dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="10dp"
-        android:text="@string/psychologist_title"
-        android:textColor="@color/azul_rocoso"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/more_information_about_fragment"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="10dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/psychologistTitleTv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/psychologistTitleTv"
-        app:lottie_rawRes="@raw/more_info_about_fragment" />
-
-    <TextView
-        android:id="@+id/psychologistDescriptionTv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/find_psychologist"
-        android:textColor="@color/soft_black"
-        android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/psychologist_recycler"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/secondary_background_gray"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/psychologistDescriptionTv"
-        tools:listitem="@layout/card_psychologists" />
+        android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/psychologistTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/psychologist_title"
+            android:textColor="@color/azul_rocoso"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.facebook.shimmer.ShimmerFrameLayout
-        android:id="@+id/psychologistLoadingShimmer"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0"
-        app:shimmer_auto_start="true">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/more_information_about_fragment"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/psychologistTitleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/psychologistTitleTv"
+            app:lottie_rawRes="@raw/more_info_about_fragment" />
 
-        <ScrollView
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/psychologistDescriptionTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/find_psychologist"
+            android:textColor="@color/soft_black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/psychologistTitleTv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/psychologist_recycler"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:background="@color/secondary_background_gray"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/psychologistDescriptionTv"
+            tools:listitem="@layout/card_psychologists" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/viewLoading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/psychologistLoadingShimmer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:shimmer_auto_start="true">
 
-                <include layout="@layout/shimmer_psychologists" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
 
-                <include layout="@layout/shimmer_psychologists" />
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/viewLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                    <include layout="@layout/shimmer_psychologists" />
 
-        </ScrollView>
+                    <include layout="@layout/shimmer_psychologists" />
 
-    </com.facebook.shimmer.ShimmerFrameLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <include
-        android:id="@+id/viewErrorPsychologist"
-        layout="@layout/view_error"
-        android:visibility="gone" />
+            </ScrollView>
 
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/psychologistContentGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:constraint_referenced_ids="psychologistTitleTv,more_information_about_fragment, psychologistDescriptionTv, psychologist_recycler" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            android:id="@+id/viewErrorPsychologist"
+            layout="@layout/view_error"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/psychologistContentGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="psychologistTitleTv,more_information_about_fragment, psychologistDescriptionTv, psychologist_recycler" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
