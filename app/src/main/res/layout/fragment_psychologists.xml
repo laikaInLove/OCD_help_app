@@ -64,38 +64,37 @@
         app:layout_constraintTop_toBottomOf="@+id/psychologistDescriptionTv"
         tools:listitem="@layout/card_psychologists" />
 
-    <LinearLayout
-        android:id="@+id/psychologistLoadingShimmerContainer"
-        android:layout_width="0dp"
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/psychologistLoadingShimmer"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:background="@color/white"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:shimmer_auto_start="true">
 
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/psychologistLoadingShimmer"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:shimmer_auto_start="true">
+            android:fillViewport="true">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/viewLoading"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <include layout="@layout/shimmer_psychologists" />
-
                 <include layout="@layout/shimmer_psychologists" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </com.facebook.shimmer.ShimmerFrameLayout>
+        </ScrollView>
 
-    </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
     <include
         android:id="@+id/viewErrorPsychologist"

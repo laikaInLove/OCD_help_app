@@ -104,10 +104,10 @@ class PsychologistsFragment : Fragment() {
     private fun handleLoading(isLoading: Boolean) {
         with(binding) {
             if (isLoading) {
-                psychologistLoadingShimmerContainer.show()
-                psychologistLoadingShimmerContainer.bringToFront()
+                psychologistLoadingShimmer.show()
+                psychologistLoadingShimmer.bringToFront()
             } else {
-                psychologistLoadingShimmerContainer.hide()
+                psychologistLoadingShimmer.hide()
             }
         }
     }
