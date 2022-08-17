@@ -1,5 +1,6 @@
 package com.example.tococd.presentation.screens.onboarding
 
+import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,8 @@ import com.example.tococd.presentation.screens.onboarding.pages.FirstPageOnboard
 import com.example.tococd.presentation.screens.onboarding.pages.SecondPageOnboardingFragment
 import com.example.tococd.presentation.screens.onboarding.pages.ThirdPageOnboardingFragment
 import dagger.hilt.android.AndroidEntryPoint
+import me.relex.circleindicator.CircleIndicator3
+
 
 @AndroidEntryPoint
 class OnboardingFragment : Fragment() {
@@ -24,6 +27,10 @@ class OnboardingFragment : Fragment() {
     ): View {
         _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
         return binding.root
+
+        val indicator: CircleIndicator3 = binding.indicator
+        indicator.setViewPager(binding.onboardingVp)
+        indicator.createIndicators(2,0)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

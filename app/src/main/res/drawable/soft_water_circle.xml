@@ -7,8 +7,8 @@
     <corners android:radius = "40dp"
         android:bottomLeftRadius="40dp"/>
 
-    <stroke android:width="3dp"
-        android:color="@color/black"/>
+    <stroke android:width="2dp"
+        android:color="@color/azul_rocoso"/>
 
 
 </shape>

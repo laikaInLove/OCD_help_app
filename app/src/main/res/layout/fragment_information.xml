@@ -9,69 +9,73 @@
     android:tag="fragment_information_tag"
     tools:context=".presentation.screens.information.InformationFragment">
 
-    <TextView
-        android:id="@+id/yourName_here"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/fredokaone_regular"
-        android:textColor="@color/black"
-        android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Hi User" />
+    
+        <TextView
+            android:id="@+id/yourName_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/fredokaone_regular"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="👋 Hi User" />
 
-    <TextView
-        android:id="@+id/informationAreaTitleTv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/information_area_title"
-        android:textColor="@color/azul_rocoso"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yourName_here" />
+        <TextView
+            android:id="@+id/informationAreaTitleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/information_area_title"
+            android:textColor="@color/azul_rocoso"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yourName_here" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/more_information_about_fragment"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/informationAreaTitleTv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/informationAreaTitleTv"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/more_info_about_fragment" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/more_information_about_fragment"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="35dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/informationAreaTitleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/informationAreaTitleTv"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/more_info_about_fragment" />
 
-    <TextView
-        android:id="@+id/informationAreaDescriptionHeaderTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/information_area_description_header"
-        android:textColor="@color/soft_black"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/informationAreaTitleTv" />
+        <TextView
+            android:id="@+id/informationAreaDescriptionHeaderTv"
+            android:layout_width="364dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/information_area_description_header"
+            android:textColor="@color/soft_black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/informationAreaTitleTv" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_information"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/informationAreaDescriptionHeaderTv"
-        tools:listitem="@layout/card_layout" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_information"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/informationAreaDescriptionHeaderTv"
+            tools:listitem="@layout/card_layout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

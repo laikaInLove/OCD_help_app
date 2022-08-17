@@ -26,7 +26,8 @@
     <string name="continue_option">Continue</string>
     <string name="touch_description">Touch each card to display all the information and answer your questions.</string>
     <string name="close_option">Close</string>
-    <string name="user_name">Hi %1$s</string>
+    <string name="user_name">👋 Hi %1$s</string>
+    <string name="subTitle_seekHelpArea">Find a list of specialists to start your recovery now!</string>
     <string name="next_option">Next</string>
     <string name="start_option">Start</string>
     <string name="first_page_onboarding_title">Are You confused and have questions?</string>

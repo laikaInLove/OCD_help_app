@@ -16,6 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_regular"
+        android:paddingStart="12dp"
         android:paddingTop="15dp"
         android:paddingBottom="10dp"
         android:text="@string/psychologist_title"
@@ -24,6 +25,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/more_information_about_fragment"
@@ -48,9 +50,8 @@
         android:text="@string/find_psychologist"
         android:textColor="@color/soft_black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/psychologistTitleTv" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/psychologist_recycler"
@@ -88,6 +89,7 @@
                 android:orientation="vertical">
 
                 <include layout="@layout/shimmer_psychologists" />
+
                 <include layout="@layout/shimmer_psychologists" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>

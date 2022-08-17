@@ -50,6 +50,7 @@
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="20sp"
+            android:layout_marginTop="18dp"
             android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/imageDescriptionInformation"
             app:layout_constraintStart_toStartOf="parent"
