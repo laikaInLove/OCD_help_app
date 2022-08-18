@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".presentation.screens.onboarding.OnboardingFragment">
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboardingVp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/indicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <me.relex.circleindicator.CircleIndicator3
         android:id="@+id/indicator"
@@ -14,15 +22,5 @@
         android:layout_alignParentBottom="true"
         android:background="#F4511E"
         app:layout_constraintBottom_toBottomOf="parent" />
-    
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/onboardingVp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/indicator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
