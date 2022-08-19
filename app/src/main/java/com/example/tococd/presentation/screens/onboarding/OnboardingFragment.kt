@@ -11,6 +11,7 @@ import com.example.tococd.presentation.screens.onboarding.pages.SecondPageOnboar
 import com.example.tococd.presentation.screens.onboarding.pages.ThirdPageOnboardingFragment
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class OnboardingFragment : Fragment() {
 
@@ -47,6 +48,9 @@ class OnboardingFragment : Fragment() {
             requireActivity().supportFragmentManager,
             lifecycle
         )
-        binding.onboardingVp.adapter = adapter
+        with(binding) {
+            onboardingVp.adapter = adapter
+            indicator.setViewPager(onboardingVp)
+        }
     }
 }

@@ -60,7 +60,7 @@ class InformationFragment : Fragment() {
             descriptionId = R.string.information_area_description,
             secondTitleId = R.string.information_area_title,
             secondDescriptionId = R.string.touch_description,
-            lottieAnimationView = R.raw.bear_sad,
+            lottieAnimationView = R.raw.welcome_information,
             secondLottieAnimationView = R.raw.touch
         )
     }

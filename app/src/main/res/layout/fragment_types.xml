@@ -11,6 +11,7 @@
     <TextView
         android:id="@+id/informationAreaTitleTv"
         android:layout_width="0dp"
+        android:paddingStart="10dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -24,7 +25,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/more_information_about_fragment"
-        android:layout_width="50dp"
+        android:layout_width="60dp"
+        android:paddingStart="-15dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
@@ -38,6 +40,8 @@
     <TextView
         android:id="@+id/informationAreaDescriptionHeaderTv"
         android:layout_width="0dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="14dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
