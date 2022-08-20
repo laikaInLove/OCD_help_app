@@ -7,13 +7,14 @@
     android:layout_height="match_parent"
     android:background="@color/secondary_background_gray"
     android:fillViewport="true"
-    android:orientation="vertical"
     android:tag="fragment_psychologist_tag"
     tools:context=".presentation.screens.psychologist.PsychologistsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
         <TextView
             android:id="@+id/psychologistTitleTv"
@@ -58,9 +59,9 @@
             android:id="@+id/psychologist_recycler"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
             android:background="@color/secondary_background_gray"
             android:nestedScrollingEnabled="false"
-            android:layout_marginHorizontal="12dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
