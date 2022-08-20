@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/PsychologistFragment"
@@ -57,9 +57,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/psychologist_recycler"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/secondary_background_gray"
             android:nestedScrollingEnabled="false"
+            android:layout_marginHorizontal="12dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,14 +70,9 @@
 
         <com.facebook.shimmer.ShimmerFrameLayout
             android:id="@+id/psychologistLoadingShimmer"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
             app:shimmer_auto_start="true">
 
             <ScrollView
@@ -86,8 +82,9 @@
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/viewLoading"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
                     <include layout="@layout/shimmer_psychologists" />
@@ -109,9 +106,9 @@
             android:id="@+id/psychologistContentGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="visible"
+            android:visibility="gone"
             app:constraint_referenced_ids="psychologistTitleTv,more_information_about_fragment, psychologistDescriptionTv, psychologist_recycler" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

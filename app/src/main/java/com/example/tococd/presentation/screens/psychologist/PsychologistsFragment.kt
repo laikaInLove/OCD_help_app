@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tococd.R
 import com.example.tococd.databinding.FragmentPsychologistsBinding
 import com.example.tococd.presentation.screens.psychologist.state.Effect
@@ -66,8 +68,8 @@ class PsychologistsFragment : Fragment() {
 
     private fun setUpViews() {
         binding.psychologistRecycler.apply {
+            layoutManager = LinearLayoutManager(requireContext())
             adapter = psychologistsAdapter
-            setHasFixedSize(true)
         }
     }
 
@@ -104,8 +106,8 @@ class PsychologistsFragment : Fragment() {
     private fun handleLoading(isLoading: Boolean) {
         with(binding) {
             if (isLoading) {
-                psychologistLoadingShimmer.show()
                 psychologistLoadingShimmer.bringToFront()
+                psychologistLoadingShimmer.show()
             } else {
                 psychologistLoadingShimmer.hide()
             }

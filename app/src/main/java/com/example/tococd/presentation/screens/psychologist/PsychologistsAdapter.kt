@@ -27,7 +27,6 @@ class PsychologistsAdapter(
         override fun bind(item: Psychologist) {
             with(binding) {
                 psychologistName.text = item.name
-                contactPsychologist.text = "Contact"
                 psychologistSpecialist.text = item.specialties
                 imagePsychologist.loadUrlImage(item.imagePerson)
                 imagePsychologistType.loadUrlImage(item.imageType)

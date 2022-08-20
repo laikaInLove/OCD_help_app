@@ -5,21 +5,21 @@
     android:id="@+id/card_psychologist_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="4dp"
     android:backgroundTint="@color/white"
     app:cardCornerRadius="18dp"
-    app:cardUseCompatPadding="true"
     app:strokeColor="@color/deep_pool"
     app:strokeWidth="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_psychologist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_psychologist"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_marginTop="16dp"
             app:civ_border_color="@color/deep_river_2"
             app:civ_border_overlay="true"
@@ -31,29 +31,27 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_psychologist_type"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:civ_border_color="@color/deep_river_2"
             app:civ_border_width="3dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.78"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.477"
+            app:layout_constraintBottom_toBottomOf="@+id/image_psychologist"
+            app:layout_constraintEnd_toEndOf="@+id/image_psychologist"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintTop_toTopOf="@+id/image_psychologist"
+            app:layout_constraintVertical_bias="0.9"
             tools:src="@drawable/ic_person" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_psychologist_language"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="-8dp"
             app:civ_border_color="@color/deep_river_2"
             app:civ_border_width="3dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.21"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/image_psychologist"
+            app:layout_constraintStart_toStartOf="@+id/image_psychologist"
+            app:layout_constraintTop_toTopOf="@+id/image_psychologist"
             app:layout_constraintVertical_bias="0.1"
             tools:src="@drawable/ic_eu" />
 
@@ -62,11 +60,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
+            android:ellipsize="end"
             android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
             android:textAlignment="center"
             android:textColor="@color/azul_rocoso"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/psychologist_specialist"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_psychologist"
@@ -77,31 +79,35 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
+            android:ellipsize="end"
             android:fontFamily="@font/helvetica_regular"
-            android:text="@string/specialist"
+            android:maxLines="2"
+            android:paddingBottom="16dp"
             android:textAlignment="center"
             android:textColor="@color/green"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/contact_psychologist"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/psychologist_name" />
+            app:layout_constraintTop_toBottomOf="@+id/psychologist_name"
+            app:layout_constraintVertical_bias="0"
+            tools:text="@string/specialist" />
 
         <Button
             android:id="@+id/contact_psychologist"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginVertical="16dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
             android:background="@drawable/blue_rocoso_button"
             android:text="@string/contact"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/psychologist_specialist"
-            app:layout_constraintStart_toStartOf="@+id/psychologist_specialist"
-            app:layout_constraintTop_toBottomOf="@+id/psychologist_specialist" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
