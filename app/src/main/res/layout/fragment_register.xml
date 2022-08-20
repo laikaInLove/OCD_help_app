@@ -43,8 +43,7 @@
                 android:text="@string/your_name"
                 android:textAlignment="textStart"
                 android:textColor="@color/azul_rocoso"
-                android:textSize="35sp"
-                android:textStyle="bold"
+                android:textSize="45sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -57,7 +56,7 @@
                 android:text="@string/what_would"
                 android:textAlignment="textStart"
                 android:textColor="@color/azul_rocoso"
-                android:textSize="26sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

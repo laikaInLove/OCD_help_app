@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">toc ocd</string>
+
+    //Start App
+    <string name="what_would">¿Cómo te gustaría que te llamaramos?</string>
+    <string name="your_name">Tú nombre…</string>
+
+    //Your Name is
+    <string name="hintName">Escribe tú nombre aquí</string>
+
+    //Information
+    <string name="what_is_the_OCD">¿Qué es el TOC?</string>
+    <string name="touch_for_more_information">Toca para más información</string>
+    <string name="description_information">Descripción…</string>
+    <string name="howWorks">¿Cómo funciona el TOC?</string>
+    <string name="hWDescription">Es bien sabido como funciona el TOC dentro de cada paciente, como se ha leído anteriormente primero comienza con un pensamiento, una idea o una imagen que aparece de forma intrusiva y que claramente la persona con TOC no la quiere ni se identifica con ella, toda esta situación genera mucho estrés, ansiedad, inseguridad y malestar en la persona, todo esto lleva a la persona a realizar una serie de acciones (o pensamientos) llamados rituales que contrarrestan durante un corto periodo de tiempo estas sensaciones negativas de ansiedad, pero en realidad a largo plazo estas compulsiones hacen más grande el problema, ya que aumentan los síntomas del TOC</string>
+
+    //Psychologists
+    <string name="specialist">☑Transtorno Obsesivo Compulsivo (TOC) <br /> ☑Ansiedad <br /> ☑Estrategias de afrontamiento</string>
+    <string name="contact">contacto</string>
+    <string name="ocd_information">Información</string>
+    <string name="ocd_types">Tipos</string>
+    <string name="ocd_seek_help">Buscar ayuda</string>
+    <string name="information_area_title">Área de información</string>
+    <string name="information_area_description">Bienvenido al área de información, recuerda que el primer paso para mejorar es estar informado, aquí conocerás las respuestas a las mayores preguntas que surgen en torno al TOC.</string>
+    <string name="continue_option">Siguiente</string>
+    <string name="touch_description">Toca cada tarjeta para que aparezca toda la información y puedas resolver tus preguntas.</string>
+    <string name="close_option">Cerrar</string>
+    <string name="user_name">👋 Hola %1$s</string>
+    <string name="next_option">Siguiente</string>
+    <string name="start_option">Empezar</string>
+    <string name="first_page_onboarding_title">¿Te sientes confundido y tienes preguntas?</string>
+    <string name="first_page_onboarding_description">El TOC genera muchas dudas y preguntas como: ¿Qué es el TOC? ¿Tengo un TOC? Cómo puedo mejorar? Pues bien, aquí encontrarás la respuesta a estas y otras preguntas.</string>
+    <string name="second_page_onboarding_title">El TOC puede causar mucha confusión y estrés…</string>
+    <string name="second_page_onboarding_description">Sabemos lo confuso, estresante, ansioso y frustrante que puede ser el TOC, sin embargo, existe la recuperación y el primer paso para iniciarla es informarse y conocer cómo funciona el TOC.</string>
+    <string name="third_page_onboarding_title">Por eso UsHelp está aquí para responder a todas sus preguntas.</string>
+    <string name="third_page_onboarding_description">UsHelp ha sido creado para resolver las preguntas más frecuentes sobre el TOC, además encontrarás especialistas en TOC para ayudarte a ti y a tus seres queridos.</string>
+    <string name="invalid_name">Nombre incorrecto</string>
+    <string name="invalid_name_length">Asegúrese de que su nombre contenga caracteres pero que no supere los 10 caracteres</string>
+    <string name="unexpected_error">Error inesperado, por favor inténtelo más tarde</string>
+    <string name="error_title">Ups! Un error ocurrio</string>
+    <string name="find_psychologist">Encuentra una lista de psicólogos especializados en TOC que pueden ayudarte.</string>
+    <string name="psychologist_title">Búsca de ayuda Área</string>
+    <string name="psychologist_dialog_description">Bienvenido al área de ayuda, aquí encontrarás una lista de profesionales del TOC que podrán asesorarte y ayudarte.</string>
+    <string name="psychologitst_dialog_description">¡Haga clic en el botón de contacto debajo de cada especialista y comience su recuperación ahora!</string>
+    <string name="types_dialog_title">Tipos de TOC Área</string>
+    <string name="types_dialog_description">Bienvenido al área de Tipos de TOC, aquí encontrará información sobre los tipos más comunes de TOC.</string>
+    <string name="psychologitst_dialog_second_description">También puede hacer clic en el icono azul de la derecha para ver mucha más información en sitios web especializados.</string>
+    <string name="information_area_description_header">Resuelve aquí tus dudas sobre el TOC</string>
+    <string name="types_title">Tipos de TOC Área</string>
+    <string name="types_description_header">Conoce los tipos más comunes de TOC</string>
+
+
+    <string name="questionInfo">\uD83D\uDC49 El TOC es un trastorno mental caracterizado por pensamientos obsesivos y compulsiones que ocupan al menos una hora al día, pero normalmente más, y que causan una angustia significativa.\n\n" +
+                    "Las obsesiones suelen ser pensamientos, imágenes o ideas persistentes e incontrolables que aparecen de forma intrusiva, estas obsesiones son indeseadas y causan mucho malestar.  Estos pensamientos también provocan ansiedad y malestar que interfieren significativamente en la vida normal. A raíz de estos pensamientos, la persona con TOC realiza una serie de acciones para contrarrestar el malestar, lo que en realidad aumenta los síntomas del TOC. \n" +
+                    "\n" + "\uD83D\uDC49 Todas las personas tienen pensamientos intrusivos a lo largo del día, pero una persona que no tiene TOC es capaz de filtrar los pensamientos recurrentes sobre los gérmenes, por ejemplo.  Sin embargo, las personas con TOC que están obsesionadas con los gérmenes no pueden dejar de pensar en estar contaminadas y pueden incluso evitar entrar en lugares públicos.</string>
+
+
+    <string name="WhatSymptoms">¿Cuáles son los síntomas?</string>
+
+    <string name="AgeOCD">¿A qué edad aparece el TOC?</string>
+
+    <string name="adultsOCD">¿Cuántos adultos padecen de TOC?</string>
+
+    <string name="childresOCD">¿Cuántos niños padecen de TOC?</string>
+
+    <string name="CausesOCD">¿Cuáles son las causas del TOC?</string>
+
+    <string name="DiagnosisOCD">El diagnostico del TOC</string>
+
+    <string name="treatingOCD">¿Cuál es el tratamiento del TOC?</string>
+
+    <string name="doubtOCD">¿Cómo puedo saber si lo que tengo es TOC?</string>
+
+    <string name="treatmentOCD">¿Qué tratamiento debo elegir?</string>
+
+    <string name="specialistOCD">¿Cómo elegir un psicólogo especialista?</string>
+
+    <string name="specialistOCDDescription">✅ Incluso los profesionales de la salud mental con impresionantes credenciales y experiencia en otras enfermedades mentales pueden carecer de la formación adecuada para diagnosticar y tratar eficazmente el TOC. Sólo un terapeuta cognitivo-conductual cualificado puede proporcionar una TCC eficaz. Antes de comprometerse a un tratamiento con cualquier terapeuta, es esencial comprobar si es competente para administrar la TCC para el TOC</string>
+
+    <string name="treatmentOCDDescription">👉 Conseguir el alivio del TOC es posible con el tratamiento disponible hoy en día. Aunque no existe una cura para el TOC, el tratamiento más eficaz y basado en pruebas para tratar eficazmente el TOC es la terapia cognitivo-conductual (TCC). Este tratamiento está recomendado por instituciones de renombre mundial, como los Institutos Nacionales de Salud Mental, la Clínica Mayo y la Facultad de Medicina de Harvard, entre otras.</string>
+
+    <string name="doubtOCDDescription">Arriba en la pregunta "¿Cómo funciona el TOC?" y en la pregunta "¿Cuáles son los síntomas del TOC?" puedes ver cómo funciona el TOC y cómo se manifiesta en las personas, pero recuerda que es muy difícil y no es recomendable autodiagnosticarse, por lo que siempre se recomienda consultar a un profesional.</string>
+
+    <string name="treatingOCDDescription">\uD83D\uDC69\u200D⚕️ ¿Cuáles son los tratamientos para el TOC?\n" +
+                    "Los principales tratamientos para el trastorno obsesivo-compulsivo son la terapia cognitivo-conductual con exposición y prevención de respuesta y los medicamentos.\n\n" +
+                    "\uD83D\uDC49 La terapia cognitivo-conductual (TCC) es un tipo de psicoterapia. Enseña diferentes formas de pensar, comportarse y reaccionar ante las obsesiones y compulsiones. Un tipo específico de TCC que puede tratar el TOC es la llamada terapia de exposición y prevención de la respuesta, que es la técnica más eficaz para tratar el TOC hoy en día, consiste en exponer gradualmente a la persona con TOC a sus miedos y obsesiones, aprendiendo formas saludables de afrontar la ansiedad causada por el TOC.\n\n" +
+                    "\uD83D\uDC8A Los medicamentos para el TOC incluyen ciertos tipos de antidepresivos. Para algunas personas funcionan y para otras no, además los efectos secundarios varían de una persona a otra, por lo que siempre se recomienda consultar a un profesional.</string>
+
+    <string name="DiagnosisOCDDescription">\uD83D\uDC49 No existe ninguna prueba de laboratorio que pueda identificar el TOC.  Los profesionales de la salud mental suelen utilizar diferentes técnicas de diagnóstico para determinar la presencia del TOC, así como otras herramientas que miden la gravedad de las obsesiones y compulsiones, siendo la más común la Escala Obsesiva Compulsiva de Yale-Brown (Y-BOCS).\n\n" +
+                    "Por ello, siempre se recomienda consultar a un profesional, mejor aún si es especialista en TOC o tiene experiencia en este tipo de afecciones.</string>
+
+    <string name="CausesOCDDescription">Todavía no se conoce la causa del trastorno obsesivo-compulsivo. Factores como la genética, la biología y la química del cerebro, junto con el entorno de la persona, pueden desempeñar un papel importante en la enfermedad.</string>
+
+    <string name="childresOCDDescription">\uD83D\uDC49 Hay al menos 1 de cada 200 o 500.000 niños y adolescentes que padecen el TOC. Es más o menos el mismo número de niños que tienen diabetes.\n\n" +
+                    "Esto significa que es probable que haya cuatro o cinco niños con TOC en cualquier escuela primaria de tamaño medio. En una escuela secundaria de tamaño medio o grande, podría haber 20 estudiantes que luchan con los desafíos causados por el TOC.\n\n" +
+                    "\uD83D\uDD18 Fundación Internacional del TOC (IOCDF)</string>
+
+    <string name="adultsOCDDescription">Nuestras mejores estimaciones son que alrededor de 1 de cada 100 adultos - o entre 2 y 3 millones de adultos en Estados Unidos - tienen actualmente TOC.\n\n" +
+
+                    "Este es aproximadamente el mismo número de personas que viven en la ciudad de Houston, Texas.\n\n" +
+                    "\uD83D\uDD18 Fundación Internacional del TOC (IOCDF)</string>
+
+    <string name="AgeOCDDescription">El TOC afecta por igual a hombres, mujeres y niños de todas las razas, etnias y orígenes. El TOC puede comenzar en cualquier momento, desde el preescolar hasta la edad adulta.\n" +
+                    "\n" +
+                    "Aunque el TOC puede aparecer a cualquier edad, generalmente hay dos rangos de edad en los que el TOC tiende a aparecer por primera vez:\n" +
+                    "\n" +
+                    "\uD83D\uDC49 Entre los 8 y los 12 años.\n" +
+                    "\uD83D\uDC49 Entre el final de la adolescencia y el principio de la edad adulta.\n\n" +
+                    "\uD83D\uDD18 Fundación Internacional del TOC (IOCDF)</string>
+
+    <string name="WhatSymptomsDescription">\uD83D\uDC49 Es muy necesario saber que las obsesiones representadas por pensamientos, ideas o imágenes en el TOC pueden tener cualquier tema, desde el miedo excesivo a los gérmenes, el miedo excesivo a hacer daño a alguien, entre otros muchos temas, por lo que hay tres síntomas que siempre están presentes en el TOC:\n\n"
+                    +
+                    "\uD83D\uDD18 Pensamientos, ideas e imágenes intrusivas que acuden a tu mente de forma repentina y sin que lo desees.\n\n" +
+                    "\uD83D\uDD18 Grado de insatisfacción, ansiedad y malestar debido a la presencia de estos pensamientos.\n\n" +
+                    "\uD83D\uDD18 Acciones o pensamientos para contrarrestar estos sentimientos negativos\n\n</string>
+
+
+</resources>

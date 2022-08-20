@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:background="@drawable/blue_rocoso_button"
-        android:text="@string/start_option"
+        android:text="@string/next_option"
         android:textAllCaps="false"
         android:textColor="@color/secondary_background_gray"
         android:textSize="20sp"
