@@ -19,7 +19,7 @@
 
     //Psychologists
     <string name="specialist">☑Obsessive-Compulsive (OCD) <br /> ☑Anxiety <br /> ☑Coping Skills</string>
-    <string name="contact">contact</string>
+    <string name="contact">Contact</string>
     <string name="ocd_information">Information</string>
     <string name="ocd_types">Types</string>
     <string name="ocd_seek_help">Seek help</string>

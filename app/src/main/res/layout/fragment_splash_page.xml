@@ -7,31 +7,36 @@
     android:background="@drawable/splash_background"
     tools:context=".presentation.screens.splash.SplashPageFragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/splash_screen_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
         android:paddingStart="40dp"
         android:paddingEnd="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
+        app:layout_constraintTop_toTopOf="@id/guideline"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/mental_help" />
 
     <ImageView
         android:id="@+id/splash_screen_down"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/ushelp_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/splash_screen_up"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.995" />
+        app:layout_constraintVertical_bias="1.3"
+        app:layout_constraintTop_toTopOf="@id/splash_screen_up" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
