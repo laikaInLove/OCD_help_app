@@ -19,8 +19,8 @@ class TypesAdapter(private val onItemClick: (url: String) -> Unit) :
         BaseViewHolder<CardTypesBinding, TypesModel>(viewBinding) {
         override fun bind(item: TypesModel) {
             with(binding) {
-                typesTitle.text = item.tittleTypes
-                typesDescription.text = item.descriptionTypes
+                typesTitle.text = this.root.context.getString(item.tittleTypes)
+                typesDescription.text = this.root.context.getString(item.descriptionTypes)
                 imageViewTypes.loadUrlImage(item.imageTypes)
             }
             setUpListeners(item)

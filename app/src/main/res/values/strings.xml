@@ -13,7 +13,7 @@
     <string name="what_is_the_OCD">What is the OCD?</string>
     <string name="touch_for_more_information">Touch for information</string>
     <string name="description_information">Description…</string>
-    <string name="howWorks">How works OCD</string>
+    <string name="howWorks">How works OCD?</string>
     <string name="hWDescription">It is well known how OCD works within each patient, as you read above first begins with a thought, an idea or an image that appears intrusively and that clearly the person with OCD does not want it or identify with it, this whole situation generates a lot of stress, anxiety, insecurity and discomfort in the person, all this leads the person to perform a series of actions (or thoughts) called rituals which counteract for a short period of time these negative feelings of anxiety, but in reality in the long term these compulsions make the problem bigger, as they increase the symptoms of OCD.\n\n
                     For example, a person with germ OCD has intrusive ideas, thoughts or images that everything is full of germs, so they will feel very insecure, anxious and uncomfortable, then to counteract these symptoms they will begin to wash their hands much more frequently and also stop going to certain places which they believe are contaminated, thus forming a cycle in which the person will not improve unless they stop doing these compulsions and confront their obsessions.</string>
 
@@ -72,7 +72,7 @@
 
     <string name="treating_ocd">Treating OCD</string>
 
-    <string name="doubt_ocd">How can I tell if it’s OCD?</string>
+    <string name="doubt_ocd">How do I know if I have OCD?</string>
 
     <string name="treatment_ocd">Which treatment to choose?</string>
 
@@ -114,5 +114,40 @@
                     Actions or thoughts to counter these negative feelings</string>
 
     <string name="touch_to_see">Touch to see</string>
+
+
+
+    <string name="contamination_ocd">Contamination OCD</string>
+    <string name="contamination_ocd_description">Pollution OCD is one of the most well-known types of obsessive-compulsive disorder. This type of OCD can lead a person to have obsessive thoughts and fear of being "contaminated"</string>
+
+    <string name="harm_ocd">Harm OCD</string>
+    <string name="harm_ocd_description">Harm OCD is a subtype of obsessive-compulsive disorder (OCD) that causes intrusive unwanted thoughts, images or urges to harm oneself or others.</string>
+
+    <string name="relationship_ocd">Relationship OCD</string>
+    <string name="relationship_ocd_description">Relational OCD is a form of obsessive-compulsive disorder in which people experience intrusive thoughts and compulsive behaviors related to their relationship.</string>
+
+    <string name="pure_ocd">Pure OCD</string>
+    <string name="pure_ocd_description">Pure OCD, also known as purely obsessive OCD, is a form of OCD characterized by intrusive, unwanted and uncontrollable thoughts which have mostly mental rather than physical rituals.</string>
+
+    <string name="pedophilia_ocd">Pedophilia OCD</string>
+    <string name="pedophilia_ocd_description">Pedophilia OCD is a subtype of obsessive-compulsive disorder characterized by obsessive thoughts, images and impulses and compulsive behaviors around sexual thoughts about children.</string>
+
+    <string name="religious_ocd">Religious OCD</string>
+    <string name="religious_ocd_description">People with religious OCD base their compulsions and obsessions in religious or morally thoughts. People with this OCD type have recurrent intrusive and unwanted "blasphemous" thoughts.</string>
+
+    <string name="magical_thinking_ocd">Magical thinking OCD</string>
+    <string name="magical_thinking_ocd_description">Obsessive-compulsive disorder due to magical thinking is a subtype of OCD characterized by intrusive thoughts and compulsive behaviors around superstition or magical thinking to avoid negative experiences.</string>
+
+    <string name="health_concern_ocd">Health concern OCD</string>
+    <string name="health_concern_ocd_description">Health-related obsessive-compulsive disorder is a subtype of OCD that causes the person to have obsessive thoughts about developing a serious illness in themselves or others.</string>
+
+    <string name="existential_ocd">Existential OCD</string>
+    <string name="existential_ocd_description">Existential OCD consists of intrusive and repetitive thinking about unanswerable questions that may be philosophical or existentialist in nature, or both.</string>
+
+    <string name="suicidal_ocd">Suicidal OCD</string>
+    <string name="suicidal_ocd_description">uicidal obsessive-compulsive disorder (OCD) is an OCD subtype that includes unwanted thoughts, images, or impulses related to killing oneself.</string>
+
+    <string name="false_memory_ocd">False memory OCD</string>
+    <string name="false_memory_ocd_description">Obsessive-compulsive disorder (OCD) of false memory is a subtype of OCD characterized by continuous intrusive thoughts of doubt and compulsive behavior around a past event.</string>
 
 </resources>
