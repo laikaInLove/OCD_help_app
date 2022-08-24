@@ -11,7 +11,7 @@ import com.example.tococd.utils.extension.viewBinding
 
 class InformationAdapter :
     BaseAdapter<InformationModel, CardLayoutBinding>(
-        areItemsTheSame = { oldItem, newItem -> oldItem.tittleDescription == newItem.tittleDescription },
+        areItemsTheSame = { oldItem, newItem -> oldItem.titleDescriptionResId == newItem.titleDescriptionResId },
         areContentsTheSame = { oldItem, newItem -> oldItem == newItem }
     ) {
 
@@ -19,8 +19,8 @@ class InformationAdapter :
         BaseViewHolder<CardLayoutBinding, InformationModel>(viewBinding) {
         override fun bind(item: InformationModel) {
             with(binding) {
-                tittleInformation.text = item.tittleDescription
-                descriptionInformation.text = item.descriptionDescription
+                tittleInformation.text = this.root.context.getString(item.titleDescriptionResId)
+                descriptionInformation.text = this.root.context.getString(item.descriptionResId)
                 imageDescriptionInformation.loadImage(item.imageDescription)
             }
             setUpListeners(item)

@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/touch_for_more_information"
+            android:text="@string/touch_to_see"
             android:textColor="@color/soft_black"
             android:textSize="16sp"
             android:textStyle="italic"
