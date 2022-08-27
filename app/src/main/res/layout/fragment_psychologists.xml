@@ -18,15 +18,17 @@
 
         <TextView
             android:id="@+id/psychologistTitleTv"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:fontFamily="@font/poppins_regular"
             android:text="@string/psychologist_title"
             android:textColor="@color/azul_rocoso"
             android:textSize="28sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/more_information_about_fragment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
